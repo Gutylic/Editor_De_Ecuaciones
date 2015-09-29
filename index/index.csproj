@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B1AF617-845B-473D-AE6E-01E86EFB81A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>index</RootNamespace>
+    <AssemblyName>index</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="buscar.aspx" />
+    <Content Include="buscar_videos.aspx" />
+    <Content Include="buscar_x_clave.aspx" />
+    <Content Include="buscar_x_ficha.aspx" />
+    <Content Include="buscar_x_institucion.aspx" />
+    <Content Include="buscar_x_porcentaje.aspx" />
+    <Content Include="buscar_x_profundidad.aspx" />
+    <Content Include="Cargar_Administradores.aspx" />
+    <Content Include="Cargar_Archivos.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\shop-item.css" />
+    <Content Include="decodificador.aspx" />
+    <Content Include="etiquetas.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="homonimos.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="index1.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="lector.aspx" />
+    <Content Include="lector1.aspx" />
+    <Content Include="respuesta.aspx" />
+    <Content Include="Video.aspx" />
+    <Content Include="enunciado\Enunciado1.png" />
+    <Content Include="enunciado\Enunciado10.png" />
+    <Content Include="enunciado\Enunciado100.png" />
+    <Content Include="enunciado\Enunciado101.png" />
+    <Content Include="enunciado\Enunciado102.png" />
+    <Content Include="enunciado\Enunciado103.png" />
+    <Content Include="enunciado\Enunciado104.png" />
+    <Content Include="enunciado\Enunciado105.png" />
+    <Content Include="enunciado\Enunciado106.png" />
+    <Content Include="enunciado\Enunciado107.png" />
+    <Content Include="enunciado\Enunciado108.png" />
+    <Content Include="enunciado\Enunciado109.png" />
+    <Content Include="enunciado\Enunciado11.png" />
+    <Content Include="enunciado\Enunciado110.png" />
+    <Content Include="enunciado\Enunciado111.png" />
+    <Content Include="enunciado\Enunciado112.png" />
+    <Content Include="enunciado\Enunciado113.png" />
+    <Content Include="enunciado\Enunciado114.png" />
+    <Content Include="enunciado\Enunciado115.png" />
+    <Content Include="enunciado\Enunciado116.png" />
+    <Content Include="enunciado\Enunciado117.png" />
+    <Content Include="enunciado\Enunciado118.png" />
+    <Content Include="enunciado\Enunciado119.png" />
+    <Content Include="enunciado\Enunciado12.png" />
+    <Content Include="enunciado\Enunciado120.png" />
+    <Content Include="enunciado\Enunciado121.png" />
+    <Content Include="enunciado\Enunciado122.png" />
+    <Content Include="enunciado\Enunciado123.png" />
+    <Content Include="enunciado\Enunciado124.png" />
+    <Content Include="enunciado\Enunciado125.png" />
+    <Content Include="enunciado\Enunciado126.png" />
+    <Content Include="enunciado\Enunciado127.png" />
+    <Content Include="enunciado\Enunciado128.png" />
+    <Content Include="enunciado\Enunciado129.png" />
+    <Content Include="enunciado\Enunciado13.png" />
+    <Content Include="enunciado\Enunciado130.png" />
+    <Content Include="enunciado\Enunciado131.png" />
+    <Content Include="enunciado\Enunciado132.png" />
+    <Content Include="enunciado\Enunciado133.png" />
+    <Content Include="enunciado\Enunciado134.png" />
+    <Content Include="enunciado\Enunciado135.png" />
+    <Content Include="enunciado\Enunciado136.png" />
+    <Content Include="enunciado\Enunciado137.png" />
+    <Content Include="enunciado\Enunciado138.png" />
+    <Content Include="enunciado\Enunciado139.png" />
+    <Content Include="enunciado\Enunciado14.png" />
+    <Content Include="enunciado\Enunciado140.png" />
+    <Content Include="enunciado\Enunciado141.png" />
+    <Content Include="enunciado\Enunciado142.png" />
+    <Content Include="enunciado\Enunciado143.png" />
+    <Content Include="enunciado\Enunciado144.png" />
+    <Content Include="enunciado\Enunciado145.png" />
+    <Content Include="enunciado\Enunciado146.png" />
+    <Content Include="enunciado\Enunciado147.png" />
+    <Content Include="enunciado\Enunciado148.png" />
+    <Content Include="enunciado\Enunciado149.png" />
+    <Content Include="enunciado\Enunciado15.png" />
+    <Content Include="enunciado\Enunciado150.png" />
+    <Content Include="enunciado\Enunciado16.png" />
+    <Content Include="enunciado\Enunciado17.png" />
+    <Content Include="enunciado\Enunciado18.png" />
+    <Content Include="enunciado\Enunciado19.png" />
+    <Content Include="enunciado\Enunciado2.png" />
+    <Content Include="enunciado\Enunciado20.png" />
+    <Content Include="enunciado\Enunciado21.png" />
+    <Content Include="enunciado\Enunciado22.png" />
+    <Content Include="enunciado\Enunciado23.png" />
+    <Content Include="enunciado\Enunciado24.png" />
+    <Content Include="enunciado\Enunciado25.png" />
+    <Content Include="enunciado\Enunciado26.png" />
+    <Content Include="enunciado\Enunciado27.png" />
+    <Content Include="enunciado\Enunciado28.png" />
+    <Content Include="enunciado\Enunciado29.png" />
+    <Content Include="enunciado\Enunciado3.png" />
+    <Content Include="enunciado\Enunciado30.png" />
+    <Content Include="enunciado\Enunciado31.png" />
+    <Content Include="enunciado\Enunciado32.png" />
+    <Content Include="enunciado\Enunciado33.png" />
+    <Content Include="enunciado\Enunciado34.png" />
+    <Content Include="enunciado\Enunciado35.png" />
+    <Content Include="enunciado\Enunciado36.png" />
+    <Content Include="enunciado\Enunciado37.png" />
+    <Content Include="enunciado\Enunciado38.png" />
+    <Content Include="enunciado\Enunciado39.png" />
+    <Content Include="enunciado\Enunciado4.png" />
+    <Content Include="enunciado\Enunciado40.png" />
+    <Content Include="enunciado\Enunciado41.png" />
+    <Content Include="enunciado\Enunciado42.png" />
+    <Content Include="enunciado\Enunciado43.png" />
+    <Content Include="enunciado\Enunciado44.png" />
+    <Content Include="enunciado\Enunciado45.png" />
+    <Content Include="enunciado\Enunciado46.png" />
+    <Content Include="enunciado\Enunciado47.png" />
+    <Content Include="enunciado\Enunciado48.png" />
+    <Content Include="enunciado\Enunciado49.png" />
+    <Content Include="enunciado\enunciado5.png" />
+    <Content Include="enunciado\Enunciado50.png" />
+    <Content Include="enunciado\Enunciado51.png" />
+    <Content Include="enunciado\Enunciado52.png" />
+    <Content Include="enunciado\Enunciado53.png" />
+    <Content Include="enunciado\Enunciado54.png" />
+    <Content Include="enunciado\Enunciado55.png" />
+    <Content Include="enunciado\Enunciado56.png" />
+    <Content Include="enunciado\Enunciado57.png" />
+    <Content Include="enunciado\Enunciado58.png" />
+    <Content Include="enunciado\Enunciado59.png" />
+    <Content Include="enunciado\Enunciado6.png" />
+    <Content Include="enunciado\Enunciado60.png" />
+    <Content Include="enunciado\Enunciado61.png" />
+    <Content Include="enunciado\Enunciado62.png" />
+    <Content Include="enunciado\Enunciado63.png" />
+    <Content Include="enunciado\Enunciado64.png" />
+    <Content Include="enunciado\Enunciado65.png" />
+    <Content Include="enunciado\Enunciado66.png" />
+    <Content Include="enunciado\Enunciado67.png" />
+    <Content Include="enunciado\Enunciado68.png" />
+    <Content Include="enunciado\Enunciado69.png" />
+    <Content Include="enunciado\Enunciado7.png" />
+    <Content Include="enunciado\Enunciado70.png" />
+    <Content Include="enunciado\Enunciado71.png" />
+    <Content Include="enunciado\Enunciado72.png" />
+    <Content Include="enunciado\Enunciado73.png" />
+    <Content Include="enunciado\Enunciado74.png" />
+    <Content Include="enunciado\Enunciado75.png" />
+    <Content Include="enunciado\Enunciado76.png" />
+    <Content Include="enunciado\Enunciado77.png" />
+    <Content Include="enunciado\Enunciado78.png" />
+    <Content Include="enunciado\Enunciado79.png" />
+    <Content Include="enunciado\Enunciado8.png" />
+    <Content Include="enunciado\Enunciado80.png" />
+    <Content Include="enunciado\Enunciado81.png" />
+    <Content Include="enunciado\Enunciado82.png" />
+    <Content Include="enunciado\Enunciado83.png" />
+    <Content Include="enunciado\Enunciado84.png" />
+    <Content Include="enunciado\Enunciado85.png" />
+    <Content Include="enunciado\Enunciado86.png" />
+    <Content Include="enunciado\Enunciado87.png" />
+    <Content Include="enunciado\Enunciado88.png" />
+    <Content Include="enunciado\Enunciado89.png" />
+    <Content Include="enunciado\Enunciado9.png" />
+    <Content Include="enunciado\Enunciado90.png" />
+    <Content Include="enunciado\Enunciado91.png" />
+    <Content Include="enunciado\Enunciado92.png" />
+    <Content Include="enunciado\Enunciado93.png" />
+    <Content Include="enunciado\Enunciado94.png" />
+    <Content Include="enunciado\Enunciado95.png" />
+    <Content Include="enunciado\Enunciado96.png" />
+    <Content Include="enunciado\Enunciado97.png" />
+    <Content Include="enunciado\Enunciado98.png" />
+    <Content Include="enunciado\Enunciado99.png" />
+    <Content Include="enunciado\Enunicado2.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="buscar.aspx.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar.aspx.designer.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_videos.aspx.cs">
+      <DependentUpon>buscar_videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_videos.aspx.designer.cs">
+      <DependentUpon>buscar_videos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_x_clave.aspx.cs">
+      <DependentUpon>buscar_x_clave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_x_clave.aspx.designer.cs">
+      <DependentUpon>buscar_x_clave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_x_ficha.aspx.cs">
+      <DependentUpon>buscar_x_ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_x_ficha.aspx.designer.cs">
+      <DependentUpon>buscar_x_ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_x_institucion.aspx.cs">
+      <DependentUpon>buscar_x_institucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_x_institucion.aspx.designer.cs">
+      <DependentUpon>buscar_x_institucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_x_porcentaje.aspx.cs">
+      <DependentUpon>buscar_x_porcentaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_x_porcentaje.aspx.designer.cs">
+      <DependentUpon>buscar_x_porcentaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buscar_x_profundidad.aspx.cs">
+      <DependentUpon>buscar_x_profundidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buscar_x_profundidad.aspx.designer.cs">
+      <DependentUpon>buscar_x_profundidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar_Administradores.aspx.cs">
+      <DependentUpon>Cargar_Administradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cargar_Administradores.aspx.designer.cs">
+      <DependentUpon>Cargar_Administradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar_Archivos.aspx.cs">
+      <DependentUpon>Cargar_Archivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cargar_Archivos.aspx.designer.cs">
+      <DependentUpon>Cargar_Archivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="decodificador.aspx.cs">
+      <DependentUpon>decodificador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="decodificador.aspx.designer.cs">
+      <DependentUpon>decodificador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="etiquetas.aspx.cs">
+      <DependentUpon>etiquetas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="etiquetas.aspx.designer.cs">
+      <DependentUpon>etiquetas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homonimos.aspx.cs">
+      <DependentUpon>homonimos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homonimos.aspx.designer.cs">
+      <DependentUpon>homonimos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index1.aspx.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index1.aspx.designer.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lector.aspx.cs">
+      <DependentUpon>lector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lector.aspx.designer.cs">
+      <DependentUpon>lector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lector1.aspx.cs">
+      <DependentUpon>lector1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lector1.aspx.designer.cs">
+      <DependentUpon>lector1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="respuesta.aspx.cs">
+      <DependentUpon>respuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="respuesta.aspx.designer.cs">
+      <DependentUpon>respuesta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Video.aspx.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video.aspx.designer.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{5945f51e-ae79-4ad4-90eb-8b00fa040a3a}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="corregido\" />
+    <Folder Include="respuesta_imprimible\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15503</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15503/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

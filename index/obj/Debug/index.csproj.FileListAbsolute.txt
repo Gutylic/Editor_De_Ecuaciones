@@ -1,0 +1,8 @@
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\bin\index.dll.config
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\bin\index.dll
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\bin\index.pdb
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\obj\Debug\index.csprojResolveAssemblyReference.cache
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\obj\Debug\index.dll
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\obj\Debug\index.pdb
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\bin\Logica.dll
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\index\bin\Logica.pdb
