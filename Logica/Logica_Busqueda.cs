@@ -18,12 +18,12 @@ namespace Logica
             return db.Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado(Enunciado_1, Enunciado_2).ToList();
         }
 
-        public List<Tabla_De_Ejercicios> Mostrar_Ejercicios_Profundidad(string Enunciado)
+        public List<Mostrar_Ejercicios_Por_Profundidad_Del_EnunciadoResult> Mostrar_Ejercicios_Profundidad(string Enunciado)
         {
             return db.Mostrar_Ejercicios_Por_Profundidad_Del_Enunciado(Enunciado).ToList();
         }
 
-        public List<Vista_Buscar_Ejercicios> Mostrar_Ejercicios_Clave(string Var_1, string Var_2, string Var_3, string Var_4, string Var_5, string Var_6, string Var_7, string Var_8, string Var_9, string Var_10)
+        public List<Tabla_De_Ejercicios> Mostrar_Ejercicios_Clave(string Var_1, string Var_2, string Var_3, string Var_4, string Var_5, string Var_6, string Var_7, string Var_8, string Var_9, string Var_10)
         {
             return db.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado(Var_1, Var_2, Var_3, Var_4, Var_5, Var_6, Var_7, Var_8, Var_9, Var_10).ToList();
         }

@@ -82,6 +82,7 @@
                     <a href="Video.aspx" class="list-group-item">Videos</a>
                     <a href="Cargar_Archivos.aspx" class="list-group-item">Cargar Archivos</a>
                     <a href="Cargar_Administradores.aspx" class="list-group-item">Cargar Administradores</a>
+                    <a href="Vaciar_Base.aspx" class="list-group-item" style="color:red; font-weight:bolder">Limpiar Base</a>
                 </div>
             </div>
 

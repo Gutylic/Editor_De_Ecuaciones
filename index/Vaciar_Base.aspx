@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cargar_Administradores.aspx.cs" Inherits="index.Cargar_Administradores" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vaciar_Base.aspx.cs" Inherits="index.Vaciar_Base" %>
 
 <!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <title>Cargar Administradores</title>
@@ -18,45 +19,14 @@
 
     <script type="text/javascript">
 
-        function validar_numerico(evento) {
-
-            var tecla = document.all ? tecla = evento.which : tecla = evento.keyCode;
-            return (tecla > 47 && tecla < 58);
-
-        };
-
-        function Insertar_Administrador() {
-
-            var seleccion = confirm("Usted quiere insertar un administrador ?");
-
-            if (seleccion)
-                alert("El administrador fué insertado");
-            else
-                alert("No acepto la opción");
-
-            return seleccion;
-
-        }
-
-        function Actualizar_Administrador() {
-
-            var seleccion = confirm("Usted quiere actualizar un administrador ?");
-
-            if (seleccion)
-                alert("El administrador fué actualizado");
-            else
-                alert("No acepto la opción");
-
-            return seleccion;
-
-        }
+        
 
         function Borrar_Administrador() {
 
-            var seleccion = confirm("Usted quiere borrar un administrador ?");
+            var seleccion = confirm("Usted quiere borrar los datos?");
 
             if (seleccion)
-                alert("El administrador fué borrado");
+                alert("los datos fueron borrados");
             else
                 alert("No acepto la opción");
 
@@ -110,8 +80,8 @@
                     <a href="respuesta.aspx" class="list-group-item ">Respuestas</a>
                     <a href="Video.aspx" class="list-group-item">Videos</a>                    
                     <a href="Cargar_Archivos.aspx" class="list-group-item">Cargar Archivos</a>
-                    <a href="#" class="list-group-item active">Cargar Administradores</a>
-                    <a href="Vaciar_Base.aspx" class="list-group-item" style="color:red; font-weight:bolder">Limpiar Base</a>
+                    <a href="#" class="list-group-item">Cargar Administradores</a>
+                    <a href="Vaciar_Base.aspx" class="list-group-item active" style="color:silver; font-weight:bolder">Limpiar Base</a>
                 </div>
             </div>
 
@@ -121,7 +91,7 @@
                     
                     <div class="caption-full">
                         <h4 class="pull-right"></h4>
-                        <h4 ><a href="#" style="color:#981E1E;">Cargar Administradores:</a>
+                        <h4 ><a href="#" style="color:#981E1E;">Limpiar la base de datos:</a>
                         </h4>
                        
 
@@ -138,7 +108,7 @@
                 </tr>
             </table>
                     <hr style="margin-top:5px"/>
-               <h4 style="margin-top:-10px"><a href="#" style="color:rgb(10, 28, 72)">Password</a>
+               <h4 style="margin-top:-10px"><a href="#" style="color:rgb(10, 28, 72)">Clave</a>
                         </h4>
                         <table style="width: 100%;">
                 <tr>
@@ -151,13 +121,10 @@
                     </table>
                     <hr style="margin-top:5px"/>        
                         
-                    <h4 style="margin-top:-10px"><a href="#" style="color:rgb(10, 28, 72)">Empresa </a>
-                        </h4>
+                    
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:100%">
-                         <asp:TextBox ID="TextBox_Insertar_Empresa" MaxLength="20" runat="server" style="padding-left:3px" Height="36px" Width="100%"></asp:TextBox>
-                    </td>
+                    
                     </tr>
                     </table>
                   
@@ -174,14 +141,17 @@
                 
 
                     <div class="row">
-                        <div class="col-xs-4">
-                        <asp:Button ID="Boton_Cargar" CssClass="btn btn-danger" runat="server" Text="Insertar Administrador" Width="100%" OnClientClick="return Cargar_Administrador();" OnClick="Boton_Cargar_Click"  />
+                        <div class="col-xs-3">
+                       <asp:Button ID="Boton_Borrar_Anos" CssClass="btn btn-danger" runat="server" Text="Años" Width="100%" OnClientClick="return Borrar_Administrador();" OnClick="Boton_Borrar_Anos_Click"  />
                     </div>
-                    <div class="col-xs-4">
-                        <asp:Button ID="Boton_Actualizar" CssClass="btn btn-warning" runat="server" Text="Actualizar Administrador" OnClientClick="return Actualizar_Administrador();" Width="100%" OnClick="Boton_Actualizar_Click"  />
+                    <div class="col-xs-3">
+                        <asp:Button ID="Boton_Borrar_Temas" CssClass="btn btn-danger" runat="server" Text="Temas" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borrar_Temas_Click"   />
                     </div>
-                    <div class="col-xs-4">
-                        <asp:Button ID="Boton_Borrar" CssClass="btn btn-primary" runat="server" Text="Borrar Administrador" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borrar_Click"  />
+                    <div class="col-xs-3">
+                       <asp:Button ID="Boton_Borror_Colegios" CssClass="btn btn-danger" runat="server" Text="Colegios" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borror_Colegios_Click"  />
+                    </div>
+                    <div class="col-xs-3">
+                        <asp:Button ID="Boton_Borrar_Profesores" CssClass="btn btn-danger" runat="server" Text="Profesores" Width="100%" OnClientClick="return BOrrar_Administrador();" OnClick="Boton_Borrar_Profesores_Click"   />
                     </div>
                     </div>
 
@@ -189,7 +159,28 @@
                     
 
                 </div>
+                <div class="well">
+                
 
+                    <div class="row">
+                        <div class="col-xs-3">
+                        <asp:Button ID="Boton_Borrar_Materias" CssClass="btn btn-danger" runat="server" Text="Materias" Width="100%" OnClientClick="return Borrar_Administrador();" OnClick="Boton_Borrar_Materias_Click"   />
+                    </div>
+                    <div class="col-xs-3">
+                        <asp:Button ID="Boton_Borrar_Administradores" CssClass="btn btn-danger" runat="server" Text="Administradores" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borrar_Administradores_Click"  />
+                    </div>
+                    <div class="col-xs-3">
+                       <asp:Button ID="Boton_Borrar_Empresas" CssClass="btn btn-danger" runat="server" Text="Empresas" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borrar_Empresas_Click"  />
+                    </div>
+                    
+                    <div class="col-xs-3">
+                       <asp:Button ID="Boton_Borrar_Ejercicios" CssClass="btn btn-danger" runat="server" Text="Ejercicios" OnClientClick="return Borrar_Administrador();" Width="100%" OnClick="Boton_Borrar_Ejercicios_Click"  />
+                    </div>
+                    
+                    
+
+                </div>
+                
             </div>
 
         </div>

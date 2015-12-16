@@ -83,158 +83,8 @@
     <Content Include="lector.aspx" />
     <Content Include="lector1.aspx" />
     <Content Include="respuesta.aspx" />
+    <Content Include="Vaciar_Base.aspx" />
     <Content Include="Video.aspx" />
-    <Content Include="enunciado\Enunciado1.png" />
-    <Content Include="enunciado\Enunciado10.png" />
-    <Content Include="enunciado\Enunciado100.png" />
-    <Content Include="enunciado\Enunciado101.png" />
-    <Content Include="enunciado\Enunciado102.png" />
-    <Content Include="enunciado\Enunciado103.png" />
-    <Content Include="enunciado\Enunciado104.png" />
-    <Content Include="enunciado\Enunciado105.png" />
-    <Content Include="enunciado\Enunciado106.png" />
-    <Content Include="enunciado\Enunciado107.png" />
-    <Content Include="enunciado\Enunciado108.png" />
-    <Content Include="enunciado\Enunciado109.png" />
-    <Content Include="enunciado\Enunciado11.png" />
-    <Content Include="enunciado\Enunciado110.png" />
-    <Content Include="enunciado\Enunciado111.png" />
-    <Content Include="enunciado\Enunciado112.png" />
-    <Content Include="enunciado\Enunciado113.png" />
-    <Content Include="enunciado\Enunciado114.png" />
-    <Content Include="enunciado\Enunciado115.png" />
-    <Content Include="enunciado\Enunciado116.png" />
-    <Content Include="enunciado\Enunciado117.png" />
-    <Content Include="enunciado\Enunciado118.png" />
-    <Content Include="enunciado\Enunciado119.png" />
-    <Content Include="enunciado\Enunciado12.png" />
-    <Content Include="enunciado\Enunciado120.png" />
-    <Content Include="enunciado\Enunciado121.png" />
-    <Content Include="enunciado\Enunciado122.png" />
-    <Content Include="enunciado\Enunciado123.png" />
-    <Content Include="enunciado\Enunciado124.png" />
-    <Content Include="enunciado\Enunciado125.png" />
-    <Content Include="enunciado\Enunciado126.png" />
-    <Content Include="enunciado\Enunciado127.png" />
-    <Content Include="enunciado\Enunciado128.png" />
-    <Content Include="enunciado\Enunciado129.png" />
-    <Content Include="enunciado\Enunciado13.png" />
-    <Content Include="enunciado\Enunciado130.png" />
-    <Content Include="enunciado\Enunciado131.png" />
-    <Content Include="enunciado\Enunciado132.png" />
-    <Content Include="enunciado\Enunciado133.png" />
-    <Content Include="enunciado\Enunciado134.png" />
-    <Content Include="enunciado\Enunciado135.png" />
-    <Content Include="enunciado\Enunciado136.png" />
-    <Content Include="enunciado\Enunciado137.png" />
-    <Content Include="enunciado\Enunciado138.png" />
-    <Content Include="enunciado\Enunciado139.png" />
-    <Content Include="enunciado\Enunciado14.png" />
-    <Content Include="enunciado\Enunciado140.png" />
-    <Content Include="enunciado\Enunciado141.png" />
-    <Content Include="enunciado\Enunciado142.png" />
-    <Content Include="enunciado\Enunciado143.png" />
-    <Content Include="enunciado\Enunciado144.png" />
-    <Content Include="enunciado\Enunciado145.png" />
-    <Content Include="enunciado\Enunciado146.png" />
-    <Content Include="enunciado\Enunciado147.png" />
-    <Content Include="enunciado\Enunciado148.png" />
-    <Content Include="enunciado\Enunciado149.png" />
-    <Content Include="enunciado\Enunciado15.png" />
-    <Content Include="enunciado\Enunciado150.png" />
-    <Content Include="enunciado\Enunciado16.png" />
-    <Content Include="enunciado\Enunciado17.png" />
-    <Content Include="enunciado\Enunciado18.png" />
-    <Content Include="enunciado\Enunciado19.png" />
-    <Content Include="enunciado\Enunciado2.png" />
-    <Content Include="enunciado\Enunciado20.png" />
-    <Content Include="enunciado\Enunciado21.png" />
-    <Content Include="enunciado\Enunciado22.png" />
-    <Content Include="enunciado\Enunciado23.png" />
-    <Content Include="enunciado\Enunciado24.png" />
-    <Content Include="enunciado\Enunciado25.png" />
-    <Content Include="enunciado\Enunciado26.png" />
-    <Content Include="enunciado\Enunciado27.png" />
-    <Content Include="enunciado\Enunciado28.png" />
-    <Content Include="enunciado\Enunciado29.png" />
-    <Content Include="enunciado\Enunciado3.png" />
-    <Content Include="enunciado\Enunciado30.png" />
-    <Content Include="enunciado\Enunciado31.png" />
-    <Content Include="enunciado\Enunciado32.png" />
-    <Content Include="enunciado\Enunciado33.png" />
-    <Content Include="enunciado\Enunciado34.png" />
-    <Content Include="enunciado\Enunciado35.png" />
-    <Content Include="enunciado\Enunciado36.png" />
-    <Content Include="enunciado\Enunciado37.png" />
-    <Content Include="enunciado\Enunciado38.png" />
-    <Content Include="enunciado\Enunciado39.png" />
-    <Content Include="enunciado\Enunciado4.png" />
-    <Content Include="enunciado\Enunciado40.png" />
-    <Content Include="enunciado\Enunciado41.png" />
-    <Content Include="enunciado\Enunciado42.png" />
-    <Content Include="enunciado\Enunciado43.png" />
-    <Content Include="enunciado\Enunciado44.png" />
-    <Content Include="enunciado\Enunciado45.png" />
-    <Content Include="enunciado\Enunciado46.png" />
-    <Content Include="enunciado\Enunciado47.png" />
-    <Content Include="enunciado\Enunciado48.png" />
-    <Content Include="enunciado\Enunciado49.png" />
-    <Content Include="enunciado\enunciado5.png" />
-    <Content Include="enunciado\Enunciado50.png" />
-    <Content Include="enunciado\Enunciado51.png" />
-    <Content Include="enunciado\Enunciado52.png" />
-    <Content Include="enunciado\Enunciado53.png" />
-    <Content Include="enunciado\Enunciado54.png" />
-    <Content Include="enunciado\Enunciado55.png" />
-    <Content Include="enunciado\Enunciado56.png" />
-    <Content Include="enunciado\Enunciado57.png" />
-    <Content Include="enunciado\Enunciado58.png" />
-    <Content Include="enunciado\Enunciado59.png" />
-    <Content Include="enunciado\Enunciado6.png" />
-    <Content Include="enunciado\Enunciado60.png" />
-    <Content Include="enunciado\Enunciado61.png" />
-    <Content Include="enunciado\Enunciado62.png" />
-    <Content Include="enunciado\Enunciado63.png" />
-    <Content Include="enunciado\Enunciado64.png" />
-    <Content Include="enunciado\Enunciado65.png" />
-    <Content Include="enunciado\Enunciado66.png" />
-    <Content Include="enunciado\Enunciado67.png" />
-    <Content Include="enunciado\Enunciado68.png" />
-    <Content Include="enunciado\Enunciado69.png" />
-    <Content Include="enunciado\Enunciado7.png" />
-    <Content Include="enunciado\Enunciado70.png" />
-    <Content Include="enunciado\Enunciado71.png" />
-    <Content Include="enunciado\Enunciado72.png" />
-    <Content Include="enunciado\Enunciado73.png" />
-    <Content Include="enunciado\Enunciado74.png" />
-    <Content Include="enunciado\Enunciado75.png" />
-    <Content Include="enunciado\Enunciado76.png" />
-    <Content Include="enunciado\Enunciado77.png" />
-    <Content Include="enunciado\Enunciado78.png" />
-    <Content Include="enunciado\Enunciado79.png" />
-    <Content Include="enunciado\Enunciado8.png" />
-    <Content Include="enunciado\Enunciado80.png" />
-    <Content Include="enunciado\Enunciado81.png" />
-    <Content Include="enunciado\Enunciado82.png" />
-    <Content Include="enunciado\Enunciado83.png" />
-    <Content Include="enunciado\Enunciado84.png" />
-    <Content Include="enunciado\Enunciado85.png" />
-    <Content Include="enunciado\Enunciado86.png" />
-    <Content Include="enunciado\Enunciado87.png" />
-    <Content Include="enunciado\Enunciado88.png" />
-    <Content Include="enunciado\Enunciado89.png" />
-    <Content Include="enunciado\Enunciado9.png" />
-    <Content Include="enunciado\Enunciado90.png" />
-    <Content Include="enunciado\Enunciado91.png" />
-    <Content Include="enunciado\Enunciado92.png" />
-    <Content Include="enunciado\Enunciado93.png" />
-    <Content Include="enunciado\Enunciado94.png" />
-    <Content Include="enunciado\Enunciado95.png" />
-    <Content Include="enunciado\Enunciado96.png" />
-    <Content Include="enunciado\Enunciado97.png" />
-    <Content Include="enunciado\Enunciado98.png" />
-    <Content Include="enunciado\Enunciado99.png" />
-    <Content Include="enunciado\Enunicado2.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -361,6 +211,13 @@
     <Compile Include="respuesta.aspx.designer.cs">
       <DependentUpon>respuesta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vaciar_Base.aspx.cs">
+      <DependentUpon>Vaciar_Base.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vaciar_Base.aspx.designer.cs">
+      <DependentUpon>Vaciar_Base.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Video.aspx.cs">
       <DependentUpon>Video.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -396,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="corregido\" />
+    <Folder Include="enunciado\" />
     <Folder Include="respuesta_imprimible\" />
   </ItemGroup>
   <PropertyGroup>
