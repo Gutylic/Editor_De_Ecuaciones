@@ -415,4 +415,26 @@
   <Function Name="dbo.Borrar_Tabla_De_Empresa" Method="Borrar_Tabla_De_Empresa">
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Actualizar_Datos_En_La_Base" Method="Actualizar_Datos_En_La_Base">
+    <Parameter Name="Identificador" Parameter="identificador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Enunciado_MATH" Parameter="enunciado_MATH" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Enunciado_Limpio" Parameter="enunciado_Limpio" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Titulo" Parameter="titulo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Tipo_De_Institucion" Parameter="tipo_De_Institucion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tipo_De_Ejercicio" Parameter="tipo_De_Ejercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Ubicacion_Respuesta_Imprimible" Parameter="ubicacion_Respuesta_Imprimible" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="Ubicacion_Respuesta_Visible" Parameter="ubicacion_Respuesta_Visible" Type="System.String" DbType="NVarChar(40)" />
+    <Parameter Name="Ubicacion_Video_Y_Explicaciones" Parameter="ubicacion_Video_Y_Explicaciones" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Explicacion_Realizada" Parameter="explicacion_Realizada" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Actualizar_En_La_Tabla_De_Busqueda" Method="Actualizar_En_La_Tabla_De_Busqueda">
+    <Parameter Name="Identificador" Parameter="identificador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tema" Parameter="tema" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Materia" Parameter="materia" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Colegio" Parameter="colegio" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Ano" Parameter="ano" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Profesor" Parameter="profesor" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

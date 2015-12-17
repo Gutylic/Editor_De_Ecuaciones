@@ -41,6 +41,19 @@ namespace index
             }
            
             Session["fileName"] = Subir_Ejercicio.FileName;
+
+            try
+            {
+                string Identificadora = (((string)Session["fileName"]).Substring(9));
+                int Identificador = int.Parse(Identificadora.Substring(0, Identificadora.Length - 4));
+            }
+
+            catch 
+            {
+                return;
+            }
+
+
             string filename = Path.Combine(Server.MapPath("~/corregido"), (string)Session["fileName"]);
             Subir_Ejercicio.SaveAs(filename);
             StreamReader file = new StreamReader(filename, System.Text.Encoding.UTF8);

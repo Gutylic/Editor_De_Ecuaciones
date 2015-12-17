@@ -28,6 +28,8 @@ namespace Logica
         public string Quitar_Encabezado_Y_Final_MATH(string Enunciado_MATH)
         {
             Enunciado_MATH = Enunciado_MATH.Substring(49);
+            Enunciado_MATH = Enunciado_MATH.Replace("&#x000A0;", "");
+            Enunciado_MATH = Enunciado_MATH.Replace("<mo></mo>", "");
             return Enunciado_MATH.Remove(Enunciado_MATH.Length - 7, 7).ToLower();
         }
         
@@ -75,7 +77,7 @@ namespace Logica
             }
             // pongo todos los terminos en minusculas y saco los acentos
             Linea = Linea.ToLower();
-
+            Linea = Linea.Replace("&#x000a0;", "");
             Linea = Linea.Replace("&#225;", "a");
             Linea = Linea.Replace("&#233;", "e");
             Linea = Linea.Replace("&#237;", "i");
@@ -88,6 +90,7 @@ namespace Logica
             Linea = Linea.Replace("&#211;", "o");
             Linea = Linea.Replace("&#218;", "u");
             Linea = Linea.Replace("&#209;", "n");
+            
 
             Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
             return Linea; // variable final limpia de wiris
@@ -179,6 +182,7 @@ namespace Logica
             if (Dato != null)
             {
                 string Linea = Dato.ToLower().Trim();
+               
                 Linea = Linea.Replace("á", "a");
                 Linea = Linea.Replace("é;", "e");
                 Linea = Linea.Replace("í;", "i");
@@ -193,6 +197,7 @@ namespace Logica
                 Linea = Linea.Replace("ñ", "n");
                 Linea = Linea.Replace("Ñ", "n");
                 Linea = Linea.Replace("º", "");
+                
                 Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
                 return Linea; // variable final limpia de wiris
             }

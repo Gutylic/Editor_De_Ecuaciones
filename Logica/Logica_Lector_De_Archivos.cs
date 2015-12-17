@@ -13,20 +13,25 @@ namespace Logica
         string Etiqueta_Armada;
         string Respuesta;
 
-        public int Actualizar_En_Tabla_Primera_Parte(string Enunciado_MATH, string Titulo, string Ubicacion_Video_Y_Explicaciones, int Tipo_De_Institucion, int Tipo_De_Ejercicio, string Explicacion_Realizada, string Ubicacion_Respuesta_Imprimible, string Ubicacion_Respuesta_Visible)
+        public int Actualizar_En_Tabla_Primera_Parte(int ID, string Enunciado_MATH, string Titulo, string Ubicacion_Video_Y_Explicaciones, int Tipo_De_Institucion, int Tipo_De_Ejercicio, string Explicacion_Realizada, string Ubicacion_Respuesta_Imprimible, string Ubicacion_Respuesta_Visible)
         {
 
             if (Ubicacion_Video_Y_Explicaciones == string.Empty)
             {
                 Ubicacion_Video_Y_Explicaciones = null;
-                return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
+                return db.Actualizar_Datos_En_La_Base(ID, Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
             }
             return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
         }
 
         public string Quitar_Encabezado_MATH(string Enunciado_MATH)
         {
-            return Enunciado_MATH.Substring(49);
+            Enunciado_MATH = Enunciado_MATH.Replace("&#x000a0;", "");
+            Enunciado_MATH = Enunciado_MATH.Replace("<mo></mo>", "");
+            Enunciado_MATH = Enunciado_MATH.Substring(49);
+
+            return Enunciado_MATH.Remove(Enunciado_MATH.Length - 7, 7).ToLower();
+           
         }
 
         public string Enunciado_Limpio(string Enunciado_MATH)
@@ -42,7 +47,7 @@ namespace Logica
               "&#913;","&#914;","&#915;","&#916;","&#917;","&#918;","&#919;",
               "&#920;","&#921;","&#922;","&#923;","&#924;","&#925;","&#926;",
               "&#927;","&#928;","&#929;","&#931;","&#932;","&#933;","&#934;",
-              "&#935;","&#936;","&#937;",
+              "&#935;","&#936;","&#937;","&#x000a0;",
               "&#8597;","&#8592;", "&#8593;","&#8595;","&#8596;","&#8594;",
               "&#8598;", "&#8599;","&#8600;","&#8601;","&#8618;","&#8629;",
               "&#8657;","&#8645;","&#8659;","&#8617;","&#8661;","&#8636;","&#8637;",
@@ -73,7 +78,7 @@ namespace Logica
             }
             // pongo todos los terminos en minusculas y saco los acentos
             Linea = Linea.ToLower();
-
+            Linea = Linea.Replace("&#x000a0;", "");
             Linea = Linea.Replace("&#225;", "a");
             Linea = Linea.Replace("&#233;", "e");
             Linea = Linea.Replace("&#237;", "i");
@@ -86,6 +91,7 @@ namespace Logica
             Linea = Linea.Replace("&#211;", "o");
             Linea = Linea.Replace("&#218;", "u");
             Linea = Linea.Replace("&#209;", "n");
+            
 
             Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
             return Linea; // variable final limpia de wiris
@@ -292,9 +298,9 @@ namespace Logica
 
         }
 
-        public void Actualizar_En_Tabla_Tercera_Parte(string Tema1_S, string Tema2_S, string Tema3_S, string Tema1, string Tema2, string Tema3, string Materia1, string Materia2, string Materia3, string Colegio1, string Colegio2, string Colegio3, string Ano1, string Ano2, string Ano3, string Profesor1, string Profesor2, string Profesor3)
+        public void Actualizar_En_Tabla_Tercera_Parte(int Identificador, string Tema1_S, string Tema2_S, string Tema3_S, string Tema1, string Tema2, string Tema3, string Materia1, string Materia2, string Materia3, string Colegio1, string Colegio2, string Colegio3, string Ano1, string Ano2, string Ano3, string Profesor1, string Profesor2, string Profesor3)
         {
-            db.Insertar_En_La_Tabla_De_Busqueda(Union_Etiqueta_Tema(Corregir_Etiqueta(Tema1_S), Corregir_Etiqueta(Tema2_S), Corregir_Etiqueta(Tema3_S), Corregir_Etiqueta(Tema1), Corregir_Etiqueta(Tema2), Corregir_Etiqueta(Tema3)), Buscar_Materia(Corregir_Etiqueta(Materia1), Corregir_Etiqueta(Materia2), Corregir_Etiqueta(Materia3)), Buscar_Colegio(Corregir_Etiqueta(Colegio1), Corregir_Etiqueta(Colegio2), Corregir_Etiqueta(Colegio3)), Buscar_Ano(Corregir_Etiqueta(Ano1), Corregir_Etiqueta(Ano2), Corregir_Etiqueta(Ano3)), Buscar_Profesor(Corregir_Etiqueta(Profesor1), Corregir_Etiqueta(Profesor2), Corregir_Etiqueta(Profesor3)));
+            db.Actualizar_En_La_Tabla_De_Busqueda(Identificador,Union_Etiqueta_Tema(Corregir_Etiqueta(Tema1_S), Corregir_Etiqueta(Tema2_S), Corregir_Etiqueta(Tema3_S), Corregir_Etiqueta(Tema1), Corregir_Etiqueta(Tema2), Corregir_Etiqueta(Tema3)), Buscar_Materia(Corregir_Etiqueta(Materia1), Corregir_Etiqueta(Materia2), Corregir_Etiqueta(Materia3)), Buscar_Colegio(Corregir_Etiqueta(Colegio1), Corregir_Etiqueta(Colegio2), Corregir_Etiqueta(Colegio3)), Buscar_Ano(Corregir_Etiqueta(Ano1), Corregir_Etiqueta(Ano2), Corregir_Etiqueta(Ano3)), Buscar_Profesor(Corregir_Etiqueta(Profesor1), Corregir_Etiqueta(Profesor2), Corregir_Etiqueta(Profesor3)));
         }
 
 
@@ -331,6 +337,11 @@ namespace Logica
             string Union = Etiqueta[0] + Etiqueta[1] + Etiqueta[2];
 
             string[] Respuesta = Union.Trim().Split(' ');
+
+            if (Respuesta[0] == string.Empty)
+            {
+                return "p";
+            }
 
             Etiqueta[0] = string.Empty;
 
@@ -377,6 +388,11 @@ namespace Logica
             string Union = Etiqueta[0] + Etiqueta[1] + Etiqueta[2];
 
             string[] Respuesta = Union.Trim().Split(' ');
+
+            if (Respuesta[0] == string.Empty)
+            {
+                return "m";
+            }
 
             Etiqueta[0] = string.Empty;
 
@@ -485,6 +501,10 @@ namespace Logica
 
             string[] Respuesta = Union.Trim().Split(' ');
 
+            if (Respuesta[0] == string.Empty)
+            {
+                return "t";
+            }
 
             Etiqueta_Armada = string.Empty;
             foreach (string s in Respuesta.Distinct().ToArray()) // paso la lista a una variable string
@@ -529,6 +549,11 @@ namespace Logica
             string Union = Etiqueta[0] + Etiqueta[1] + Etiqueta[2];
 
             string[] Respuesta = Union.Trim().Split(' ');
+
+            if (Respuesta[0] == string.Empty)
+            {
+                return "a";
+            }
 
             Etiqueta[0] = string.Empty;
 
@@ -575,6 +600,11 @@ namespace Logica
             string Union = Etiqueta[0] + Etiqueta[1] + Etiqueta[2];
 
             string[] Respuesta = Union.Trim().Split(' ');
+
+            if (Respuesta[0] == string.Empty)
+            {
+                return "c";
+            }
 
             Etiqueta[0] = string.Empty;
 

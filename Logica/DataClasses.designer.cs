@@ -560,6 +560,20 @@ namespace Logica
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Actualizar_Datos_En_La_Base")]
+		public int Actualizar_Datos_En_La_Base([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Identificador", DbType="Int")] System.Nullable<int> identificador, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_MATH", DbType="NVarChar(MAX)")] string enunciado_MATH, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_Limpio", DbType="NVarChar(MAX)")] string enunciado_Limpio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Titulo", DbType="NVarChar(50)")] string titulo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tipo_De_Institucion", DbType="Int")] System.Nullable<int> tipo_De_Institucion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tipo_De_Ejercicio", DbType="Int")] System.Nullable<int> tipo_De_Ejercicio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ubicacion_Respuesta_Imprimible", DbType="NVarChar(40)")] string ubicacion_Respuesta_Imprimible, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ubicacion_Respuesta_Visible", DbType="NVarChar(40)")] string ubicacion_Respuesta_Visible, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ubicacion_Video_Y_Explicaciones", DbType="NVarChar(100)")] string ubicacion_Video_Y_Explicaciones, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Explicacion_Realizada", DbType="Bit")] System.Nullable<bool> explicacion_Realizada)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificador, enunciado_MATH, enunciado_Limpio, titulo, tipo_De_Institucion, tipo_De_Ejercicio, ubicacion_Respuesta_Imprimible, ubicacion_Respuesta_Visible, ubicacion_Video_Y_Explicaciones, explicacion_Realizada);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Actualizar_En_La_Tabla_De_Busqueda")]
+		public int Actualizar_En_La_Tabla_De_Busqueda([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Identificador", DbType="Int")] System.Nullable<int> identificador, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema", DbType="NVarChar(60)")] string tema, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Materia", DbType="NVarChar(60)")] string materia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio", DbType="NVarChar(60)")] string colegio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano", DbType="NVarChar(60)")] string ano, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor", DbType="NVarChar(60)")] string profesor)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificador, tema, materia, colegio, ano, profesor);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tabla_Busqueda_De_Ejercicios_Por_Etiquetas")]

@@ -95,7 +95,9 @@ namespace index
         {
             Session.Remove("Anterior");
             Actualizar_Ejercicio.Enabled = false;
-            int Valor = LLDA.Actualizar_En_Tabla_Primera_Parte((string)Session["Contenido_Wiris"],(string)Session["Titulo"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"],(int)Session["DropDownList_Institucion"], (int)Session["DropDownList_Tipo"], (string)Session["DropDownList_Enunciado_Realizado"],(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"]);
+            string Identificadora = (((string)Session["fileName"]).Substring(9));
+            int Identificador = int.Parse(Identificadora.Substring(0, Identificadora.Length-4));
+            int Valor = LLDA.Actualizar_En_Tabla_Primera_Parte(Identificador,(string)Session["Contenido_Wiris"],(string)Session["Titulo"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"],(int)Session["DropDownList_Institucion"], (int)Session["DropDownList_Tipo"], (string)Session["DropDownList_Enunciado_Realizado"],(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"]);
 
             switch (Valor)
             {
@@ -138,7 +140,7 @@ namespace index
 
             LLDA.Actualizar_En_Tabla_Segunda_Parte(Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
-            LLDA.Actualizar_En_Tabla_Tercera_Parte(Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
+            LLDA.Actualizar_En_Tabla_Tercera_Parte(Identificador, Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
             TextBox_Ano.Text = LLDA.Obtener_Ano();
             TextBox_Materia.Text = LLDA.Obtener_Materia();

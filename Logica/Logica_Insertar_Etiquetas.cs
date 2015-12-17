@@ -103,6 +103,7 @@ namespace Logica
             if (Dato != null)
             {
                 string Linea = Dato.ToLower().Trim();
+                
                 Linea = Linea.Replace("á", "a");
                 Linea = Linea.Replace("é;", "e");
                 Linea = Linea.Replace("í;", "i");
@@ -117,6 +118,7 @@ namespace Logica
                 Linea = Linea.Replace("ñ", "n");
                 Linea = Linea.Replace("Ñ", "n");
                 Linea = Linea.Replace("º", "");
+                
                 Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
                 return Linea; // variable final limpia de wiris
             }

@@ -30,6 +30,7 @@ namespace Logica
                 Linea = Linea.Replace("ñ", "n");
                 Linea = Linea.Replace("Ñ", "n");
                 Linea = Linea.Replace("º", "");
+                
                 Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
                 return Linea; // variable final limpia de wiris
             }
