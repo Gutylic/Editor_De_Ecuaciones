@@ -19,15 +19,22 @@ namespace Logica
             for (int I = 0; I < Separar_Etiqueta.Length; I++ )
             {
                 Separar_Etiqueta[I] = Separar_Etiqueta[I].Replace('m',' ').Trim();
-                List<string> Etiquetas_Totales = (from p in db.Tabla_De_Materias where p.Etiqueta_Materia == int.Parse(Separar_Etiqueta[I]) select p.Materia).ToList();
 
-                foreach (string s in Etiquetas_Totales)
+                try
                 {
+                    List<string> Etiquetas_Totales = (from p in db.Tabla_De_Materias where p.Etiqueta_Materia == int.Parse(Separar_Etiqueta[I]) select p.Materia).ToList();
 
-                    Dato = Dato + " " + s;
-                    
-                }           
-            
+                    foreach (string s in Etiquetas_Totales)
+                    {
+
+                        Dato = Dato + " " + s;
+
+                    }
+                }
+                catch
+                { 
+                
+                }
             }
 
             return Dato.Trim();
@@ -41,14 +48,19 @@ namespace Logica
             for (int I = 0; I < Separar_Etiqueta.Length; I++)
             {
                 Separar_Etiqueta[I] = Separar_Etiqueta[I].Replace('t', ' ').Trim();
-                List<string> Etiquetas_Totales = (from p in db.Tabla_De_Temas where p.Etiqueta_Tema == int.Parse(Separar_Etiqueta[I]) select p.Tema).ToList();
 
-                foreach (string s in Etiquetas_Totales)
+                try
                 {
+                    List<string> Etiquetas_Totales = (from p in db.Tabla_De_Temas where p.Etiqueta_Tema == int.Parse(Separar_Etiqueta[I]) select p.Tema).ToList();
 
-                    Dato = Dato + " " + s;
+                    foreach (string s in Etiquetas_Totales)
+                    {
 
+                        Dato = Dato + " " + s;
+
+                    }
                 }
+                catch { }
 
             }
 
@@ -63,13 +75,22 @@ namespace Logica
             for (int I = 0; I < Separar_Etiqueta.Length; I++)
             {
                 Separar_Etiqueta[I] = Separar_Etiqueta[I].Replace('a', ' ').Trim();
-                List<string> Etiquetas_Totales = (from p in db.Tabla_De_Anos where p.Etiqueta_Ano == int.Parse(Separar_Etiqueta[I]) select p.Ano).ToList();
 
-                foreach (string s in Etiquetas_Totales)
+                try
                 {
 
-                    Dato = Dato + " " + s;
+                    List<string> Etiquetas_Totales = (from p in db.Tabla_De_Anos where p.Etiqueta_Ano == int.Parse(Separar_Etiqueta[I]) select p.Ano).ToList();
 
+                    foreach (string s in Etiquetas_Totales)
+                    {
+
+                        Dato = Dato + " " + s;
+
+                    }
+                }
+                catch
+                {
+                    
                 }
 
             }
@@ -85,14 +106,19 @@ namespace Logica
             for (int I = 0; I < Separar_Etiqueta.Length; I++)
             {
                 Separar_Etiqueta[I] = Separar_Etiqueta[I].Replace('c', ' ').Trim();
-                List<string> Etiquetas_Totales = (from p in db.Tabla_De_Colegios where p.Etiqueta_Colegio == int.Parse(Separar_Etiqueta[I]) select p.Colegio).ToList();
 
-                foreach (string s in Etiquetas_Totales)
+                try
                 {
+                    List<string> Etiquetas_Totales = (from p in db.Tabla_De_Colegios where p.Etiqueta_Colegio == int.Parse(Separar_Etiqueta[I]) select p.Colegio).ToList();
 
-                    Dato = Dato + " " + s;
+                    foreach (string s in Etiquetas_Totales)
+                    {
 
+                        Dato = Dato + " " + s;
+
+                    }
                 }
+                catch { }
 
             }
 
@@ -107,14 +133,20 @@ namespace Logica
             for (int I = 0; I < Separar_Etiqueta.Length; I++)
             {
                 Separar_Etiqueta[I] = Separar_Etiqueta[I].Replace('p', ' ').Trim();
-                List<string> Etiquetas_Totales = (from p in db.Tabla_De_Profesores where p.Etiqueta_Profesor == int.Parse(Separar_Etiqueta[I]) select p.Profesor).ToList();
 
-                foreach (string s in Etiquetas_Totales)
+                try
                 {
 
-                    Dato = Dato + " " + s;
+                    List<string> Etiquetas_Totales = (from p in db.Tabla_De_Profesores where p.Etiqueta_Profesor == int.Parse(Separar_Etiqueta[I]) select p.Profesor).ToList();
 
+                    foreach (string s in Etiquetas_Totales)
+                    {
+
+                        Dato = Dato + " " + s;
+
+                    }
                 }
+                catch { }
 
             }
 

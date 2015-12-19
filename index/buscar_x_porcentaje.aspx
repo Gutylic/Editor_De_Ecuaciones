@@ -177,6 +177,7 @@ div.encabezado_panel {
 
                                 <table style="width: 100%;">
                                     <tr>
+
                                         <td style="width:50%; text-align:center"><asp:Label ID="Etiqueta_Ejercicio" runat="server" Text='<%# Eval("ID_Ejercicio") %>'></asp:Label></td>
                                         <td style="width:50%; text-align:center"><asp:Image ID="Imangen_Enunciado" ImageUrl='<%# "~/enunciados/Enunciado" + Eval("ID_Ejercicio") + ".png" %>' runat="server" /></td>
                                         

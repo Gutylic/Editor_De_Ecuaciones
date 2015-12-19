@@ -38,7 +38,7 @@ namespace Logica
             return Dato;
         }
 
-
+        
         public string Buscar_Etiquetas_Anos(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
@@ -65,6 +65,207 @@ namespace Logica
             }
             return "a" + Etiqueta_Final.ToString();
         }
+
+        public string Buscar_Etiquetas_Temas(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+
+            return "t" + Etiqueta_Final.ToString();
+
+        }
+        public string Buscar_Etiquetas_Temas_Nuevo(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+            return "t" + Etiqueta_Final.ToString();
+        }
+
+        public string Buscar_Etiquetas_Colegios(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+
+            return "c" + Etiqueta_Final.ToString();
+
+        }
+        public string Buscar_Etiquetas_Colegios_Nuevo(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+            return "c" + Etiqueta_Final.ToString();
+        }
+
+
+        public string Buscar_Etiquetas_Profesores(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Profesores where p.Profesor == Etiqueta select p.Etiqueta_Profesor).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+
+            return "p" + Etiqueta_Final.ToString();
+
+        }
+        public string Buscar_Etiquetas_Profesores_Nuevo(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Profesores where p.Profesor == Etiqueta select p.Etiqueta_Profesor).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+            return "p" + Etiqueta_Final.ToString();
+        }
+
+        public string Buscar_Etiquetas_Materias(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Materias where p.Materia == Etiqueta select p.Etiqueta_Materia).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+
+            return "m" + Etiqueta_Final.ToString();
+
+        }
+        public string Buscar_Etiquetas_Materias_Nuevo(string Etiqueta)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Etiqueta_Final = (from p in db.Tabla_De_Materias where p.Materia == Etiqueta select p.Etiqueta_Materia).SingleOrDefault();
+
+            if (Etiqueta_Final == 0)
+            {
+                return "";
+            }
+            return "m" + Etiqueta_Final.ToString();
+        }
+
+        public string Relacionar_Etiqueta_Temas(string Etiqueta, string Codigo)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
+
+            int Valor = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
+            
+            if (Valor != 0)
+            {
+                return "t" + Valor;
+            }
+            else
+            {
+                db.Relacionar_Tema(Etiqueta, Codigo_Numerico);
+                return "t" + Codigo_Numerico;
+            }
+
+        }
+
+
+        public string Relacionar_Etiqueta_Anos(string Etiqueta, string Codigo)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
+
+            int Valor = (from p in db.Tabla_De_Anos where p.Ano == Etiqueta select p.Etiqueta_Ano).SingleOrDefault();
+
+            if (Valor != 0)
+            {
+                return "a" + Valor;
+            }
+            else
+            {
+                db.Relacionar_Ano(Etiqueta, Codigo_Numerico);
+                return "a" + Codigo_Numerico;
+            }
+
+        }
+
+
+        public string Relacionar_Etiqueta_Colegios(string Etiqueta, string Codigo)
+        {
+            Etiqueta = Corregir_Etiqueta(Etiqueta);
+
+            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
+
+            int Valor = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
+
+            if (Valor != 0)
+            {
+                return "c" + Valor;
+            }
+            else
+            {
+                db.Relacionar_Colegio(Etiqueta, Codigo_Numerico);
+                return "c" + Codigo_Numerico;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public int Cantidad_De_Datos_Anos(string Etiqueta)
         {
             int J = 0;
@@ -85,32 +286,7 @@ namespace Logica
             return J;
 
         }
-        public void Relacionar_Etiqueta_Anos(string Etiqueta, string Codigo)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
-
-            int Valor = (from p in db.Tabla_De_Anos where p.Ano == Etiqueta select p.Etiqueta_Ano).SingleOrDefault();
-
-            if (Valor != 0)
-            {
-                Tabla_De_Anos Etiqueta_Final = db.Tabla_De_Anos.Single(p => p.Ano == Etiqueta);
-                Etiqueta_Final.Etiqueta_Ano = Codigo_Numerico;
-                db.SubmitChanges();
-                
-            }
-            else
-            {
-                Tabla_De_Anos Etiqueta_Final = new Tabla_De_Anos();
-                Etiqueta_Final.Etiqueta_Ano = Codigo_Numerico;
-                Etiqueta_Final.Ano = Etiqueta;
-                db.Tabla_De_Anos.InsertOnSubmit(Etiqueta_Final);
-                db.SubmitChanges();
-                
-            }
-
-        }
+       
         public void Agregar_Etiqueta_Anos(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
@@ -156,32 +332,7 @@ namespace Logica
         }
 
 
-        public string Buscar_Etiquetas_Temas(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-
-            return "a" + Etiqueta_Final.ToString();
-
-        }
-        public string Buscar_Etiquetas_Temas_Nuevo(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-            return "a" + Etiqueta_Final.ToString();
-        }
+        
         public int Cantidad_De_Datos_Temas(string Etiqueta)
         {
             int J = 0;
@@ -202,30 +353,7 @@ namespace Logica
             return J;
 
         }
-        public void Relacionar_Etiqueta_Temas(string Etiqueta, string Codigo)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
-
-            int Valor = (from p in db.Tabla_De_Temas where p.Tema == Etiqueta select p.Etiqueta_Tema).SingleOrDefault();
-
-            if (Valor != 0)
-            {
-                Tabla_De_Temas Etiqueta_Final = db.Tabla_De_Temas.Single(p => p.Tema == Etiqueta);
-                Etiqueta_Final.Etiqueta_Tema = Codigo_Numerico;
-                db.SubmitChanges();
-            }
-            else
-            {
-                Tabla_De_Temas Etiqueta_Final = new Tabla_De_Temas();
-                Etiqueta_Final.Etiqueta_Tema = Codigo_Numerico;
-                Etiqueta_Final.Tema = Etiqueta;
-                db.Tabla_De_Temas.InsertOnSubmit(Etiqueta_Final);
-                db.SubmitChanges();
-            }
-
-        }
+        
         public void Agregar_Etiqueta_Temas(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
@@ -271,32 +399,7 @@ namespace Logica
         }
 
 
-        public string Buscar_Etiquetas_Colegios(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-
-            return "a" + Etiqueta_Final.ToString();
-
-        }
-        public string Buscar_Etiquetas_Colegios_Nuevo(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-            return "a" + Etiqueta_Final.ToString();
-        }
+       
         public int Cantidad_De_Datos_Colegios(string Etiqueta)
         {
             int J = 0;
@@ -317,30 +420,7 @@ namespace Logica
             return J;
 
         }
-        public void Relacionar_Etiqueta_Colegios(string Etiqueta, string Codigo)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Codigo_Numerico = int.Parse(Codigo.Substring(1));
-
-            int Valor = (from p in db.Tabla_De_Colegios where p.Colegio == Etiqueta select p.Etiqueta_Colegio).SingleOrDefault();
-
-            if (Valor != 0)
-            {
-                Tabla_De_Colegios Etiqueta_Final = db.Tabla_De_Colegios.Single(p => p.Colegio == Etiqueta);
-                Etiqueta_Final.Etiqueta_Colegio = Codigo_Numerico;
-                db.SubmitChanges();
-            }
-            else
-            {
-                Tabla_De_Colegios Etiqueta_Final = new Tabla_De_Colegios();
-                Etiqueta_Final.Etiqueta_Colegio = Codigo_Numerico;
-                Etiqueta_Final.Colegio = Etiqueta;
-                db.Tabla_De_Colegios.InsertOnSubmit(Etiqueta_Final);
-                db.SubmitChanges();
-            }
-
-        }
+       
         public void Agregar_Etiqueta_Colegios(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
@@ -386,32 +466,7 @@ namespace Logica
         }
 
 
-        public string Buscar_Etiquetas_Profesores(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Profesores where p.Profesor == Etiqueta select p.Etiqueta_Profesor).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-
-            return "a" + Etiqueta_Final.ToString();
-
-        }
-        public string Buscar_Etiquetas_Profesores_Nuevo(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Profesores where p.Profesor == Etiqueta select p.Etiqueta_Profesor).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-            return "a" + Etiqueta_Final.ToString();
-        }
+        
         public void Agregar_Etiqueta_Profesores(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
@@ -457,32 +512,7 @@ namespace Logica
         }
 
 
-        public string Buscar_Etiquetas_Materias(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Materias where p.Materia == Etiqueta select p.Etiqueta_Materia).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-
-            return "a" + Etiqueta_Final.ToString();
-
-        }
-        public string Buscar_Etiquetas_Materias_Nuevo(string Etiqueta)
-        {
-            Etiqueta = Corregir_Etiqueta(Etiqueta);
-
-            int Etiqueta_Final = (from p in db.Tabla_De_Materias where p.Materia == Etiqueta select p.Etiqueta_Materia).SingleOrDefault();
-
-            if (Etiqueta_Final == 0)
-            {
-                return "";
-            }
-            return "a" + Etiqueta_Final.ToString();
-        }
+        
         public void Agregar_Etiqueta_Materias(string Etiqueta)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);

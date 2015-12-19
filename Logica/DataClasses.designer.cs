@@ -362,14 +362,6 @@ namespace Logica
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Contar_Ejercicios_Por_Porcentaje_Del_Enunciado")]
-		public int Contar_Ejercicios_Por_Porcentaje_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_1", DbType="NVarChar(150)")] string enunciado_1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_2", DbType="NVarChar(150)")] string enunciado_2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cantidad", DbType="Int")] ref System.Nullable<int> cantidad)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), enunciado_1, enunciado_2, cantidad);
-			cantidad = ((System.Nullable<int>)(result.GetParameterValue(2)));
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Existencia_De_Ejercicio")]
 		public int Existencia_De_Ejercicio([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_Ejercicio", DbType="Int")] System.Nullable<int> iD_Ejercicio)
 		{
@@ -526,18 +518,11 @@ namespace Logica
 			return ((ISingleResult<Mostrar_Ejercicios_Por_Profundidad_Del_EnunciadoResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado")]
-		public ISingleResult<Tabla_De_Ejercicios> Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_1", DbType="NVarChar(150)")] string enunciado_1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_2", DbType="NVarChar(150)")] string enunciado_2)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), enunciado_1, enunciado_2);
-			return ((ISingleResult<Tabla_De_Ejercicios>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado")]
-		public new ISingleResult<Tabla_De_Ejercicios> Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var1", DbType="NVarChar(20)")] string var1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var2", DbType="NVarChar(20)")] string var2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var3", DbType="NVarChar(20)")] string var3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var4", DbType="NVarChar(20)")] string var4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var5", DbType="NVarChar(20)")] string var5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var6", DbType="NVarChar(20)")] string var6, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var7", DbType="NVarChar(20)")] string var7, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var8", DbType="NVarChar(20)")] string var8, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var9", DbType="NVarChar(20)")] string var9, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var10", DbType="NVarChar(20)")] string var10)
+		public new ISingleResult<Vista_Buscar_Ejercicios> Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var1", DbType="NVarChar(20)")] string var1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var2", DbType="NVarChar(20)")] string var2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var3", DbType="NVarChar(20)")] string var3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var4", DbType="NVarChar(20)")] string var4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var5", DbType="NVarChar(20)")] string var5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var6", DbType="NVarChar(20)")] string var6, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var7", DbType="NVarChar(20)")] string var7, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var8", DbType="NVarChar(20)")] string var8, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var9", DbType="NVarChar(20)")] string var9, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var10", DbType="NVarChar(20)")] string var10)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
-			return ((ISingleResult<Tabla_De_Ejercicios>)(result.ReturnValue));
+			return ((ISingleResult<Vista_Buscar_Ejercicios>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Ficha_Completa")]
@@ -572,6 +557,42 @@ namespace Logica
 		public int Actualizar_En_La_Tabla_De_Busqueda([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Identificador", DbType="Int")] System.Nullable<int> identificador, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema", DbType="NVarChar(60)")] string tema, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Materia", DbType="NVarChar(60)")] string materia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio", DbType="NVarChar(60)")] string colegio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano", DbType="NVarChar(60)")] string ano, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor", DbType="NVarChar(60)")] string profesor)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificador, tema, materia, colegio, ano, profesor);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Relacionar_Tema")]
+		public int Relacionar_Tema([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Etiqueta", DbType="NVarChar(60)")] string etiqueta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Codigo", DbType="Int")] System.Nullable<int> codigo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), etiqueta, codigo);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Relacionar_Colegio")]
+		public int Relacionar_Colegio([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Etiqueta", DbType="NVarChar(60)")] string etiqueta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Codigo", DbType="Int")] System.Nullable<int> codigo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), etiqueta, codigo);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Relacionar_Ano")]
+		public int Relacionar_Ano([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Etiqueta", DbType="NVarChar(60)")] string etiqueta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Codigo", DbType="Int")] System.Nullable<int> codigo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), etiqueta, codigo);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado")]
+		public ISingleResult<Tabla_De_Ejercicios> Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_1", DbType="NVarChar(150)")] string enunciado_1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_2", DbType="NVarChar(150)")] string enunciado_2)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), enunciado_1, enunciado_2);
+			return ((ISingleResult<Tabla_De_Ejercicios>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Contar_Ejercicios_Por_Porcentaje_Del_Enunciado")]
+		public int Contar_Ejercicios_Por_Porcentaje_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_1", DbType="NVarChar(150)")] string enunciado_1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Enunciado_2", DbType="NVarChar(150)")] string enunciado_2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cantidad", DbType="Int")] ref System.Nullable<int> cantidad)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), enunciado_1, enunciado_2, cantidad);
+			cantidad = ((System.Nullable<int>)(result.GetParameterValue(2)));
 			return ((int)(result.ReturnValue));
 		}
 	}

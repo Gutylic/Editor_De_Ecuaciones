@@ -78,7 +78,7 @@ namespace Logica
             }
             // pongo todos los terminos en minusculas y saco los acentos
             Linea = Linea.ToLower();
-            Linea = Linea.Replace("&#x000a0;", "");
+            Linea = Linea.Replace("&#x000a0;", " ");
             Linea = Linea.Replace("&#225;", "a");
             Linea = Linea.Replace("&#233;", "e");
             Linea = Linea.Replace("&#237;", "i");

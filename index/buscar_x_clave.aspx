@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscar_x_clave.aspx.cs" Inherits="index.buscar_x_clave" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="buscar_x_clave.aspx.cs" Inherits="index.buscar_x_clave" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 

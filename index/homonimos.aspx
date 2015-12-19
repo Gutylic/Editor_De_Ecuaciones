@@ -162,8 +162,8 @@
                 <tr>
                     <td style="width:45%"><asp:TextBox ID="Etiqueta_Nueva" style="padding-left:3px" runat="server" Height="35px" Width="95%"></asp:TextBox></td>
                     <td style="width:10%"><asp:TextBox ID="Nueva_Etiqueta_Codificadora" style="text-align:center" runat="server" Width="95%" Height="35px"></asp:TextBox></td>
-                    <td style="width:45%"><asp:DropDownList ID="Etiqueta_Predeterminada" runat="server" Height="35px" Width="95%">
-                        <asp:ListItem Value="1">Cargar si esta vacia la superior </asp:ListItem>                        
+                    <td style="width:45%"><asp:DropDownList ID="Etiqueta_Predeterminada" runat="server" Height="35px" Width="95%" Enabled="false">
+                        <asp:ListItem Value="1">...</asp:ListItem>                        
                         <asp:ListItem Value="2">Temas</asp:ListItem>                        
                         <asp:ListItem Value="3">Colegios</asp:ListItem>
                         <asp:ListItem Value="4">Años</asp:ListItem>

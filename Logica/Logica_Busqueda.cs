@@ -23,7 +23,7 @@ namespace Logica
             return db.Mostrar_Ejercicios_Por_Profundidad_Del_Enunciado(Enunciado).ToList();
         }
 
-        public List<Tabla_De_Ejercicios> Mostrar_Ejercicios_Clave(string Var_1, string Var_2, string Var_3, string Var_4, string Var_5, string Var_6, string Var_7, string Var_8, string Var_9, string Var_10)
+        public List<Vista_Buscar_Ejercicios> Mostrar_Ejercicios_Clave(string Var_1, string Var_2, string Var_3, string Var_4, string Var_5, string Var_6, string Var_7, string Var_8, string Var_9, string Var_10)
         {
             return db.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado(Var_1, Var_2, Var_3, Var_4, Var_5, Var_6, Var_7, Var_8, Var_9, Var_10).ToList();
         }
@@ -51,6 +51,7 @@ namespace Logica
             Enunciado = Enunciado.Remove(0, 49); // quitar los cararcteres de adelante
             Enunciado = Enunciado.Remove(Enunciado.Length - 7, 7).ToLower(); // sacar los de atras y poner en minusculas
             Enunciado = Enunciado.Replace("&#x000a0;", "");
+           
             Enunciado = Enunciado.Replace("&#225;", "a");
             Enunciado = Enunciado.Replace("&#233;", "e");
             Enunciado = Enunciado.Replace("&#237;", "i");
@@ -81,7 +82,8 @@ namespace Logica
 
         public Dos_Datos_String_Para_Enunciado_Por_Porcentaje Logica_Por_Porcentaje(string Enunciado)
         {
-            Dos_Datos_String_Para_Enunciado_Por_Porcentaje Datos = new Dos_Datos_String_Para_Enunciado_Por_Porcentaje();   
+            Dos_Datos_String_Para_Enunciado_Por_Porcentaje Datos = new Dos_Datos_String_Para_Enunciado_Por_Porcentaje();
+            Enunciado = Correcion_Enunciado_MATH(Enunciado);
             string[] Palabras = Enunciado.Split(' ');
             int Cantidad_De_Palabras = Enunciado.Split(' ').Length + 1;
             int Resultado = (Cantidad_De_Palabras * 25) / 100;
@@ -144,7 +146,7 @@ namespace Logica
         public string Buscar_Profesor(string Dato) // vamos a formar la etiqueta de consulta para el profesor
         {
             Etiqueta_Armada = string.Empty;
-            if (Dato == string.Empty) // dato llega vacio 
+            if (Dato == " ") // dato llega vacio 
             {
                 return "\"p*\"";  // devuelve la cadena string con un comodin especial para constains
             }
@@ -165,7 +167,7 @@ namespace Logica
         public string Buscar_Materia(string Dato) // vamos a formar la etiqueta de consulta para el materia
         {
             Etiqueta_Armada = string.Empty;
-            if (Dato == string.Empty) // dato llega vacio
+            if (Dato == " ") // dato llega vacio
             {
                 return "\"m*\"";// devuelve la cadena string con un comodin especial para constains
             }
@@ -188,7 +190,7 @@ namespace Logica
         public string Buscar_Tema(string Dato) // etiqueta la consulta
         {
             Etiqueta_Armada = string.Empty;
-            if (Dato == string.Empty) // dato llega vacio
+            if (Dato == " ") // dato llega vacio
             {
                 return "\"t*\"";// devuelve la cadena string con un comodin especial para constains
             }
@@ -211,7 +213,7 @@ namespace Logica
         public string Buscar_Ano(string Dato) // etiqueta la consulta
         {
             Etiqueta_Armada = string.Empty;
-            if (Dato == string.Empty) // dato llega vacio
+            if (Dato == " ") // dato llega vacio
             {
                 return "\"a*\"";// devuelve la cadena string con un comodin especial para constains
             }
@@ -232,7 +234,7 @@ namespace Logica
         public string Buscar_Colegio(string Dato) // etiqueta la consulta
         {
             Etiqueta_Armada = string.Empty;
-            if (Dato == string.Empty) // dato llega vacio
+            if (Dato == " ") // dato llega vacio
             {
                 return "\"c*\"";// devuelve la cadena string con un comodin especial para constains
             }

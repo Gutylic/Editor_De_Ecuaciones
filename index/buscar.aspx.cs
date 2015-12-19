@@ -205,10 +205,13 @@ namespace index
 
         protected void Boton_Busqueda_Por_Tema_Click(object sender, EventArgs e)
         {
+            string Tema = string.Empty;
+            if (TextBox_MATH.Text.Contains('╝'))
+            {
+                string[] str = TextBox_MATH.Text.Split('╝');
+                Tema = str[1].Replace(" ", "").ToString().ToLower();
+            }
 
-            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-            string[] str = TextBox_MATH.Text.Split('╝');
-            string Tema = str[1].Replace(" ", "").ToString().ToLower();
 
             if (TextBox_Por_Tema.Text == string.Empty && Tema == string.Empty)
             {
@@ -228,7 +231,7 @@ namespace index
 
             if (Tema != string.Empty)
             {
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema=" + Tema + "&Materia= &Maestro= &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema=" + Tema + "&Materia= &Maestro= &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
             }
@@ -237,17 +240,23 @@ namespace index
                 Tema = TextBox_Por_Tema.Text.Replace(" ", "");
                 System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex("[^a-zA-Z0-9 ]");
                 Tema = reg.Replace(Tema.Normalize(System.Text.NormalizationForm.FormD), "").ToLower();
-                string Cadena = @"window.open('buscar_x_ficha?Tema=" + Tema + "&Materia= &Maestro= &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema=" + Tema + "&Materia= &Maestro= &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
             }
         }
-
+                
         protected void Boton_Busqueda_Por_Materia_Click(object sender, EventArgs e)
         {
-            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-            string[] str = TextBox_MATH.Text.Split('╝');
-            string Materia = str[3].Replace(" ", "").ToString().ToLower();
+            string Materia = string.Empty;
+
+
+            if (TextBox_MATH.Text.Contains('╝'))
+            { 
+                string[] str = TextBox_MATH.Text.Split('╝');
+                Materia = str[3].Replace(" ", "").ToString().ToLower();
+            }
+            
 
             if (TextBox_Por_Materia.Text == string.Empty && Materia == string.Empty)
             {
@@ -267,7 +276,7 @@ namespace index
 
             if (Materia != string.Empty)
             {
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia=" + Materia + "&Maestro= &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia=" + Materia + "&Maestro= &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
             }
@@ -276,7 +285,7 @@ namespace index
                 Materia = TextBox_Por_Materia.Text.Replace(" ", "");
                 System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex("[^a-zA-Z0-9 ]");
                 Materia = reg.Replace(Materia.Normalize(System.Text.NormalizationForm.FormD), "").ToLower();
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia=" + Materia + "&Maestro= &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia=" + Materia + "&Maestro= &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
 
@@ -285,9 +294,13 @@ namespace index
 
         protected void Boton_Busqueda_Por_Profesor_Click(object sender, EventArgs e)
         {
-            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-            string[] str = TextBox_MATH.Text.Split('╝');
-            string Profesor = str[5].Replace(" ", "").ToString().ToLower();
+            string Profesor = string.Empty;
+            if (TextBox_MATH.Text.Contains('╝'))
+            {
+                string[] str = TextBox_MATH.Text.Split('╝');
+                Profesor = str[5].Replace(" ", "").ToString().ToLower();
+            }
+            
 
             if (TextBox_Por_Profesor.Text == string.Empty && Profesor == string.Empty)
             {
@@ -307,7 +320,7 @@ namespace index
 
             if (Profesor != string.Empty)
             {
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro=" + Profesor + " &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro=" + Profesor + " &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
             }
@@ -316,7 +329,7 @@ namespace index
                 Profesor = TextBox_Por_Profesor.Text.Replace(" ", "");
                 System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex("[^a-zA-Z0-9 ]");
                 Profesor = reg.Replace(Profesor.Normalize(System.Text.NormalizationForm.FormD), "").ToLower();
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro=" + Profesor + " &Colegio= &Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro=" + Profesor + " &Colegio= &Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
 
@@ -325,10 +338,13 @@ namespace index
 
         protected void Boton_Busqueda_Por_Colegio_Click(object sender, EventArgs e)
         {
-            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-            string[] str = TextBox_MATH.Text.Split('╝');
-            string Colegio = str[7].Replace(" ", "").ToString().ToLower();
-
+            string Colegio = string.Empty;
+            if (TextBox_MATH.Text.Contains('╝'))
+            {
+                string[] str = TextBox_MATH.Text.Split('╝');
+                Colegio = str[7].Replace(" ", "").ToString().ToLower();
+            }
+           
             if (TextBox_Por_Colegio.Text == string.Empty && Colegio == string.Empty)
             {
                 return;
@@ -347,7 +363,7 @@ namespace index
 
             if (Colegio != string.Empty)
             {
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro= &Colegio=" + Colegio + "&Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro= &Colegio=" + Colegio + "&Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
             }
@@ -356,7 +372,7 @@ namespace index
                 Colegio = TextBox_Por_Colegio.Text.Replace(" ", "");
                 System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex("[^a-zA-Z0-9 ]");
                 Colegio = reg.Replace(Colegio.Normalize(System.Text.NormalizationForm.FormD), "").ToLower();
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro= &Colegio=" + Colegio + "&Ano= ','_blank');";
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= &Materia= &Maestro= &Colegio=" + Colegio + "&Ano= &ficha=','_blank');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 return;
 
@@ -365,10 +381,14 @@ namespace index
 
         protected void Boton_Busqueda_Por_Ano_Click(object sender, EventArgs e)
         {
-            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-            string[] str = TextBox_MATH.Text.Split('╝');
-            string Ano = str[9].Replace(" ", "").ToString().ToLower();
 
+            string Ano = string.Empty;
+            if (TextBox_MATH.Text.Contains('╝'))
+            {
+                string[] str = TextBox_MATH.Text.Split('╝');
+                Ano = str[9].Replace(" ", "").ToString().ToLower();
+            }
+           
             if (TextBox_Por_Ano.Text == string.Empty && Ano == string.Empty)
             {
                 return;

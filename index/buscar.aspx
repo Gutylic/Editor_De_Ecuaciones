@@ -216,17 +216,20 @@
                     <table style="width: 100%;margin-top:0px">
                         <tr>
                             <td style="text-align:center; width:33%"><asp:Button ID="Boton_Busqueda_En_Enunciado_Limpio_Palabras_Claves" OnClientClick="Cargar_Variable_CSharp()" runat="server" Text="Buscar x Palabras Claves" CssClass="btn btn-info" Width="90%" OnClick="Boton_Busqueda_En_Enunciado_Limpio_Palabras_Claves_Click"/>  </td>
-                            <td style="text-align:center; width:33%"><asp:DropDownList ID="DropDownList_Tipo_De_Institucion" runat="server" Width="90%" Height="36px">
-                            <asp:ListItem Value="1">Secundario</asp:ListItem>
-                            <asp:ListItem Value="2">Ciclo Medio</asp:ListItem>
-                            <asp:ListItem Value="3">Ciclo Superior</asp:ListItem>
-                            <asp:ListItem Value="4">Terceario</asp:ListItem>
-                            <asp:ListItem Value="5">Universidad</asp:ListItem>
-                            <asp:ListItem Value="6">Varios</asp:ListItem>
-                            <asp:ListItem Value="7">Ciclo Inicial</asp:ListItem>
-                            <asp:ListItem Value="8">Ingreso Universidad</asp:ListItem>
-                            <asp:ListItem Value="9">Ingreso Secundario</asp:ListItem>
-                            <asp:ListItem Value="10">Ingreso Terceario</asp:ListItem>
+                            <td style="text-align:center; width:33%"><asp:DropDownList ID="DropDownList_Tipo_De_Institucion" runat="server" Width="90%" Height="36px" >
+                            <asp:ListItem Value="1">Ninguno</asp:ListItem>
+                            <asp:ListItem Value="2">Secundario</asp:ListItem>
+                            <asp:ListItem Value="3">Ciclo Medio</asp:ListItem>
+                            <asp:ListItem Value="4">Ciclo Superior</asp:ListItem>
+                            <asp:ListItem Value="5">Terceario</asp:ListItem>
+                            <asp:ListItem Value="6">Universidad</asp:ListItem>
+                            <asp:ListItem Value="7">Varios</asp:ListItem>
+                            <asp:ListItem Value="8">Ciclo Inicial</asp:ListItem>
+                            <asp:ListItem Value="9">Ingreso Universidad</asp:ListItem>
+                            <asp:ListItem Value="10">Ingreso Secundario</asp:ListItem>
+                            <asp:ListItem Value="11">Ingreso Terceario</asp:ListItem>
+                            <asp:ListItem Value="12">Otros</asp:ListItem>
+                            
                         </asp:DropDownList></td>                            
                             <td style="text-align:center; width:33%"><asp:Button ID="Boton_Busqueda_Por_Institucion" OnClientClick="Cargar_Variable_CSharp()" runat="server" Text="Buscar x Institución" CssClass="btn btn-default" Width="90%" OnClick="Boton_Busqueda_Por_Institucion_Click" /></td>
                         </tr>

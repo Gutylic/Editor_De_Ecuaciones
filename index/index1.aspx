@@ -33,6 +33,38 @@
 
         }
 
+        function Confirmacion1() {
+
+            var seleccion = confirm("Usted desea crear un nuevo ejercicio ?");
+
+            if (seleccion)
+                alert("Plataforma para crear ejercicio activada");
+            else
+                alert("No acepto crear el ejercicio");
+
+            return seleccion;
+
+        }
+
+        //function Bloqueo() {
+        //                    $('TextBox').keypress(function (e) {
+        //                        var code = null;
+        //                        code = (e.keyCode ? e.keyCode : e.which);
+        //                        return (code == 13) ? false : true;
+        //                    });
+        //                });
+
+        function bloquear() {
+            
+            $("form").keypress(function (e) {
+                if (e.which == 13) {
+                    return false;
+                }
+            });
+        }
+       
+
+
     </script>
 </head>
 
@@ -41,7 +73,7 @@
     <form id="form1" runat="server">
 
     <div>
-
+        
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     
@@ -96,9 +128,12 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema1" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema2" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema3" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema1" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    
+                    
+
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema2" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema3" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                 </tr>
                        </table>
 
@@ -107,9 +142,9 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema1_S" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema2_S" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema3_S" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema1_S" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema2_S" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Tema3_S" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                 </tr>
             </table>
                     <hr style="margin-top:5px"/>
@@ -117,9 +152,9 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia1" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia2" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia3" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia1" runat="server" Height="35px" Width="90%" onkeypress="bloquear();" ></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia2" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Materia3" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                     </tr>
                     </table>
                     <hr style="margin-top:5px"/>        
@@ -128,9 +163,9 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio1" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio2" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio3" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio1" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio2" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Colegio3" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                     </tr>
                     </table>
                     <hr style="margin-top:5px"/>
@@ -139,9 +174,9 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano1" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano2" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano3" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano1" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano2" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Ano3" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                     </tr>
                     </table>
                     <hr style="margin-top:5px"/>           
@@ -150,9 +185,9 @@
                         </h4>
                         <table style="width: 100%;">
                 <tr>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor1" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor2" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
-                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor3" runat="server" Height="35px" Width="90%"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor1" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor2" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
+                    <td style="width:33%"><asp:TextBox ID="TextBox_Profesor3" runat="server" Height="35px" Width="90%" onkeypress="bloquear();"></asp:TextBox></td>
                     </tr>
                     </table>
                       
@@ -171,9 +206,9 @@
                     <table style="width: 100%;">
                             <tr>
                                 <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:#981E1E;">Tema</a></h4></td>
-                                <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:rgb(10, 28, 72;">Materia</a></h4></td>
+                                <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:rgb(10, 28, 72);">Materia</a></h4></td>
                                 <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:#981E1E;">Colegio</a></h4></td>
-                                <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:rgb(10, 28, 72;">Año</a></h4></td>
+                                <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:rgb(10, 28, 72);">Año</a></h4></td>
                                 <td style="width: 20%; text-align:center"><h4 ><a href="#" style="color:#981E1E;">Profesor</a></h4></td>
                                 
                             </tr>
@@ -206,7 +241,7 @@
 
                     <asp:Button ID="Anterior" class="btn btn-primary" runat="server" Text="<< Anterior" OnClick="Anterior_Click"  />
                     <asp:Button ID="Cargar_Ejercicio" class="btn btn-danger" runat="server" Text="Cargar Ejercicio" OnClick="Cargar_Ejercicio_Click" OnClientClick ="return Confirmacion();"  />
-                    
+                    <asp:Button ID="Nuevo" class="btn btn-success" runat="server" Text="Nuevo Ejercicio" OnClientClick ="return Confirmacion1();" OnClick="Nuevo_Click"  />
                     
 
                 </div>

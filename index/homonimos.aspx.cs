@@ -59,56 +59,96 @@ namespace index
             }
         }
 
+        
         protected void Relacionar_Etiquetas_Click(object sender, EventArgs e)
         {
-            if (LTCH.Cantidad_De_Datos_Temas(Etiqueta_Nueva.Text) == 1 || LTCH.Cantidad_De_Datos_Temas(Etiqueta_Nueva.Text) == 0)
+
+            if (DropDownList_Tipo_De_Etiqueta.SelectedItem.Value == "2")
             {
-                LTCH.Relacionar_Etiqueta_Temas(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
-                Nueva_Etiqueta_Codificadora.Text = Etiqueta_Decodificadora.Text;
-            }
-            else
-            {
-                string Error = @"<script type='text/javascript'>   
+                Etiqueta_Predeterminada.SelectedValue = "2";                
+                Etiqueta_Decodificadora.Text = LTCH.Buscar_Etiquetas_Temas(Etiquetas_A_Decodificar.Text);  
+                Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Temas_Nuevo(Etiqueta_Nueva.Text);
+
+                if (Etiqueta_Decodificadora.Text == string.Empty)
+                {
+                    return;
+                }
+
+                if (Nueva_Etiqueta_Codificadora.Text == string.Empty)
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Relacionar_Etiqueta_Temas(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
+                    return;
+                }
+                else
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Temas_Nuevo(Etiqueta_Nueva.Text);
+                    string Error = @"<script type='text/javascript'>   
                                    alert('La etiqueta que usted desea relacionar tiene varias etiquetas relacionadas, borrela y vuela a crearla');
                                    </script>";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
-                return;
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);                   
+                    return;
+                }
+                
             }
 
-            if (LTCH.Cantidad_De_Datos_Colegios(Etiqueta_Nueva.Text) == 1 || LTCH.Cantidad_De_Datos_Colegios(Etiqueta_Nueva.Text) == 0)
+
+            if (DropDownList_Tipo_De_Etiqueta.SelectedItem.Value == "3")
             {
-                LTCH.Relacionar_Etiqueta_Colegios(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
-                Nueva_Etiqueta_Codificadora.Text = Etiqueta_Decodificadora.Text;
-            }
-            else
-            {
-                string Error = @"<script type='text/javascript'>   
+                Etiqueta_Predeterminada.SelectedValue = "3";
+                Etiqueta_Decodificadora.Text = LTCH.Buscar_Etiquetas_Colegios(Etiquetas_A_Decodificar.Text);
+                Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Colegios_Nuevo(Etiqueta_Nueva.Text);
+
+                if (Etiqueta_Decodificadora.Text == string.Empty)
+                {
+                    return;
+                }
+
+                if (Nueva_Etiqueta_Codificadora.Text == string.Empty)
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Relacionar_Etiqueta_Colegios(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
+                    return;
+                }
+                else
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Colegios_Nuevo(Etiqueta_Nueva.Text);
+                    string Error = @"<script type='text/javascript'>   
                                    alert('La etiqueta que usted desea relacionar tiene varias etiquetas relacionadas, borrela y vuela a crearla');
                                    </script>";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
-                return;
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                    return;
+                }
+
             }
 
-            if (LTCH.Cantidad_De_Datos_Anos(Etiqueta_Nueva.Text) == 1 || LTCH.Cantidad_De_Datos_Anos(Etiqueta_Nueva.Text) == 0)
+
+            if (DropDownList_Tipo_De_Etiqueta.SelectedItem.Value == "4")
             {
-                LTCH.Relacionar_Etiqueta_Anos(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
-                Nueva_Etiqueta_Codificadora.Text = Etiqueta_Decodificadora.Text;
-            }
-            else
-            {
-                string Error = @"<script type='text/javascript'>   
+                Etiqueta_Predeterminada.SelectedValue = "4";
+                Etiqueta_Decodificadora.Text = LTCH.Buscar_Etiquetas_Anos(Etiquetas_A_Decodificar.Text);
+                Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Anos_Nuevo(Etiqueta_Nueva.Text);
+
+                if (Etiqueta_Decodificadora.Text == string.Empty)
+                {
+                    return;
+                }
+
+                if (Nueva_Etiqueta_Codificadora.Text == string.Empty)
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Relacionar_Etiqueta_Anos(Etiqueta_Nueva.Text, Etiqueta_Decodificadora.Text);
+                    return;
+                }
+                else
+                {
+                    Nueva_Etiqueta_Codificadora.Text = LTCH.Buscar_Etiquetas_Anos_Nuevo(Etiqueta_Nueva.Text);
+                    string Error = @"<script type='text/javascript'>   
                                    alert('La etiqueta que usted desea relacionar tiene varias etiquetas relacionadas, borrela y vuela a crearla');
                                    </script>";
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
-                return;
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                    return;
+                }
+
             }
-
-            string Error_1 = @"<script type='text/javascript'>   
-                                   alert('Relacionar etiquetas en estas categorias no es posible');
-                                   </script>";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error_1, false);
-            return;
-
+            
         }
 
         protected void Agregar_Etiqueta_Click(object sender, EventArgs e)
@@ -304,7 +344,7 @@ namespace index
                 {
                     case 0:
                         string Error = @"<script type='text/javascript'>   
-                                       alert('La caja de etiqueta buscada no puede encontrarse vacia');
+                                       alert('No existe la etiqueta que desea borrar');
                                        </script>";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
                         break;
@@ -324,7 +364,7 @@ namespace index
                 {
                     case 0:
                         string Error = @"<script type='text/javascript'>   
-                                       alert('La caja de etiqueta buscada no puede encontrarse vacia');
+                                       alert('No existe la etiqueta que desea borrar');
                                        </script>";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
                         break;
@@ -345,7 +385,7 @@ namespace index
                 {
                     case 0:
                         string Error = @"<script type='text/javascript'>   
-                                       alert('La caja de etiqueta buscada no puede encontrarse vacia');
+                                       alert('No existe la etiqueta que desea borrar');
                                        </script>";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
                         break;
@@ -365,7 +405,7 @@ namespace index
                 {
                     case 0:
                         string Error = @"<script type='text/javascript'>   
-                                       alert('La caja de etiqueta buscada no puede encontrarse vacia');
+                                       alert('No existe la etiqueta que desea borrar');
                                        </script>";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
                         break;
@@ -385,7 +425,7 @@ namespace index
                 {
                     case 0:
                         string Error = @"<script type='text/javascript'>   
-                                       alert('La caja de etiqueta buscada no puede encontrarse vacia');
+                                       alert('No existe la etiqueta que desea borrar');
                                        </script>";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
                         break;

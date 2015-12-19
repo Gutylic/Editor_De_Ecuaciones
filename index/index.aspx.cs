@@ -15,7 +15,7 @@ namespace index
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!Page.IsPostBack) {
             if(Session["Anterior"] != null)
             {
                 Titulo.Text =(string) Session["Titulo"];
@@ -24,7 +24,7 @@ namespace index
                 DropDownList_Institucion.SelectedValue = Session["DropDownList_Institucion"].ToString();
                 DropDownList_Enunciado_Realizado.SelectedValue = Session["DropDownList_Enunciado_Realizado"].ToString();
             }
-          
+          }
         }
 
         protected void Siguiente_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace index
                 return;         
             }
 
-
+            Session["Siguiente"] = 1;
             Response.Redirect("index1.aspx");
 
         }

@@ -68,7 +68,7 @@
     </Type>
   </Table>
   <Table Name="dbo.Tabla_De_Ejercicios" Member="Tabla_De_Ejercicios">
-    <Type Name="Tabla_De_Ejercicios" Id="ID7">
+    <Type Name="Tabla_De_Ejercicios" Id="ID8">
       <Column Name="ID_Ejercicio" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Titulo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="ID_Tipo_De_Ejercicio" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -127,7 +127,7 @@
     </Type>
   </Table>
   <Table Name="dbo.Vista_Buscar_Ejercicios" Member="Vista_Buscar_Ejercicios">
-    <Type Name="Vista_Buscar_Ejercicios">
+    <Type Name="Vista_Buscar_Ejercicios" Id="ID7">
       <Column Name="ID_Ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Enunciado_Limpio" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Ubicacion_Respuesta_Imprimible" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
@@ -255,12 +255,6 @@
     <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Contar_Ejercicios_Por_Porcentaje_Del_Enunciado" Method="Contar_Ejercicios_Por_Porcentaje_Del_Enunciado">
-    <Parameter Name="Enunciado_1" Parameter="enunciado_1" Type="System.String" DbType="NVarChar(150)" />
-    <Parameter Name="Enunciado_2" Parameter="enunciado_2" Type="System.String" DbType="NVarChar(150)" />
-    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.Existencia_De_Ejercicio" Method="Existencia_De_Ejercicio">
     <Parameter Name="ID_Ejercicio" Parameter="iD_Ejercicio" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -383,11 +377,6 @@
       <Column Name="ID_Ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado" Method="Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado">
-    <Parameter Name="Enunciado_1" Parameter="enunciado_1" Type="System.String" DbType="NVarChar(150)" />
-    <Parameter Name="Enunciado_2" Parameter="enunciado_2" Type="System.String" DbType="NVarChar(150)" />
-    <ElementType IdRef="ID7" />
-  </Function>
   <Function Name="dbo.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado" Method="Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado" Modifier="New">
     <Parameter Name="Var1" Parameter="var1" Type="System.String" DbType="NVarChar(20)" />
     <Parameter Name="Var2" Parameter="var2" Type="System.String" DbType="NVarChar(20)" />
@@ -407,7 +396,7 @@
     <Parameter Name="Colegio" Parameter="colegio" Type="System.String" DbType="NVarChar(150)" />
     <Parameter Name="Materia" Parameter="materia" Type="System.String" DbType="NVarChar(150)" />
     <Parameter Name="Tema" Parameter="tema" Type="System.String" DbType="NVarChar(150)" />
-    <ElementType IdRef="ID7" />
+    <ElementType IdRef="ID8" />
   </Function>
   <Function Name="dbo.Borrar_Administrador" Method="Borrar_Administrador">
     <Return Type="System.Int32" />
@@ -435,6 +424,32 @@
     <Parameter Name="Colegio" Parameter="colegio" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Ano" Parameter="ano" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Profesor" Parameter="profesor" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Relacionar_Tema" Method="Relacionar_Tema">
+    <Parameter Name="Etiqueta" Parameter="etiqueta" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Codigo" Parameter="codigo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Relacionar_Colegio" Method="Relacionar_Colegio">
+    <Parameter Name="Etiqueta" Parameter="etiqueta" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Codigo" Parameter="codigo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Relacionar_Ano" Method="Relacionar_Ano">
+    <Parameter Name="Etiqueta" Parameter="etiqueta" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Codigo" Parameter="codigo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado" Method="Mostrar_Ejercicios_Por_Porcentaje_Del_Enunciado">
+    <Parameter Name="Enunciado_1" Parameter="enunciado_1" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Enunciado_2" Parameter="enunciado_2" Type="System.String" DbType="NVarChar(150)" />
+    <ElementType IdRef="ID8" />
+  </Function>
+  <Function Name="dbo.Contar_Ejercicios_Por_Porcentaje_Del_Enunciado" Method="Contar_Ejercicios_Por_Porcentaje_Del_Enunciado">
+    <Parameter Name="Enunciado_1" Parameter="enunciado_1" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Enunciado_2" Parameter="enunciado_2" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
 </Database>
