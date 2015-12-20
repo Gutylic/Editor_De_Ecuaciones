@@ -157,62 +157,62 @@ namespace index
             if (Etiqueta_Predeterminada.SelectedValue == "2")
             {
 
-                if (LTCH.Buscar_Etiquetas_Temas_Nuevo(Etiqueta_Nueva.Text) == string.Empty)
-                {
-                    LTCH.Agregar_Etiqueta_Temas(Etiqueta_Nueva.Text);
-                    return;
-                }
-
+                Etiqueta_Decodificadora.Text = "t" + LTCH.Agregar_Etiqueta(Etiquetas_A_Decodificar.Text, 2).ToString();
+                string Error = @"<script type='text/javascript'>   
+                                   alert('Verifique la existencia de la etiqueta');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                return;
             }
 
             if (Etiqueta_Predeterminada.SelectedValue == "3")
             {
 
-                if (LTCH.Buscar_Etiquetas_Colegios_Nuevo(Etiqueta_Nueva.Text) == string.Empty)
-                {
-                    LTCH.Agregar_Etiqueta_Colegios(Etiqueta_Nueva.Text);
-                    return;
-                }
+                Etiqueta_Decodificadora.Text = "c" + LTCH.Agregar_Etiqueta(Etiquetas_A_Decodificar.Text, 3).ToString();
+                string Error = @"<script type='text/javascript'>   
+                                   alert('Verifique la existencia de la etiqueta');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                return;
 
             }
 
             if (Etiqueta_Predeterminada.SelectedValue == "5")
             {
 
-                if (LTCH.Buscar_Etiquetas_Profesores_Nuevo(Etiqueta_Nueva.Text) == string.Empty)
-                {
-                    LTCH.Agregar_Etiqueta_Profesores(Etiqueta_Nueva.Text);
-                    return;
-                }
+                Etiqueta_Decodificadora.Text = "p" + LTCH.Agregar_Etiqueta(Etiquetas_A_Decodificar.Text, 5).ToString();
+                string Error = @"<script type='text/javascript'>   
+                                   alert('Verifique la existencia de la etiqueta');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                return;
 
             }
 
             if (Etiqueta_Predeterminada.SelectedValue == "6")
             {
 
-                if (LTCH.Buscar_Etiquetas_Materias_Nuevo(Etiqueta_Nueva.Text) == string.Empty)
-                {
-                    LTCH.Agregar_Etiqueta_Materias(Etiqueta_Nueva.Text);
-                    return;
-                }
+                Etiqueta_Decodificadora.Text = "m" + LTCH.Agregar_Etiqueta(Etiquetas_A_Decodificar.Text, 6).ToString();
+                string Error = @"<script type='text/javascript'>   
+                                   alert('Verifique la existencia de la etiqueta');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                return;
 
             }
 
             if (Etiqueta_Predeterminada.SelectedValue == "4")
             {
 
-                if (LTCH.Buscar_Etiquetas_Anos_Nuevo(Etiqueta_Nueva.Text) == string.Empty)
-                {
-                    LTCH.Agregar_Etiqueta_Anos(Etiqueta_Nueva.Text);
-                    return;
-                }
+                Etiqueta_Decodificadora.Text = "a" + LTCH.Agregar_Etiqueta(Etiquetas_A_Decodificar.Text, 4).ToString();
+                string Error = @"<script type='text/javascript'>   
+                                   alert('Verifique la existencia de la etiqueta');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
+                return;
             }
 
-            string Error = @"<script type='text/javascript'>   
-                                   alert('Esta etiqueta ya existe, borrela y vuelva a crearla');
-                                   </script>";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "", Error, false);
-            return;
+           
 
 
         }

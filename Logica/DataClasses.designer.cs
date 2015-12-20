@@ -595,6 +595,14 @@ namespace Logica
 			cantidad = ((System.Nullable<int>)(result.GetParameterValue(2)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Agregar_Etiqueta_Homonima")]
+		public int Agregar_Etiqueta_Homonima([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Etiqueta", DbType="NVarChar(60)")] string etiqueta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tabla", DbType="Int")] System.Nullable<int> tabla, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Valor", DbType="Int")] ref System.Nullable<int> valor)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), etiqueta, tabla, valor);
+			valor = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tabla_Busqueda_De_Ejercicios_Por_Etiquetas")]

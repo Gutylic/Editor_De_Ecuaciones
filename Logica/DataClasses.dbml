@@ -452,4 +452,10 @@
     <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Agregar_Etiqueta_Homonima" Method="Agregar_Etiqueta_Homonima">
+    <Parameter Name="Etiqueta" Parameter="etiqueta" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tabla" Parameter="tabla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Valor" Parameter="valor" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

@@ -170,7 +170,7 @@ namespace index
                     return;
                 }
 
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema=" + Tema + "&Materia=" + Materia + "&Maestro=" + Profesor + "&Colegio=" + Colegio + "&Ano=" + Ano + "','_blank');"; // busca por ficha y bloquea el boton de buscar por enunciado
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= " + Tema + "&Materia= " + Materia + "&Maestro= " + Profesor + "&Colegio= " + Colegio + "&Ano= " + Ano + "&ficha=','_blank');"; // busca por ficha y bloquea el boton de buscar por enunciado
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
             }
 
@@ -192,8 +192,8 @@ namespace index
 
                     return;
                 }
-            
-                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema=" + Tema + "&Materia=" + Materia + "&Maestro=" + Profesor + "&Colegio=" + Colegio + "&Ano=" + Ano + "','_blank');"; // busca por ficha y bloquea el boton de buscar por enunciado
+
+                string Cadena = @"window.open('buscar_x_ficha.aspx?Tema= " + Tema + "&Materia= " + Materia + "&Maestro= " + Profesor + "&Colegio= " + Colegio + "&Ano= " + Ano + "&ficha=','_blank');"; // busca por ficha y bloquea el boton de buscar por enunciado
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
                 
             

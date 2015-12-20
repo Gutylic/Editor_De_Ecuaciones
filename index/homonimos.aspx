@@ -145,7 +145,7 @@
                 <tr>
                     <td style="width:45%"><asp:TextBox ID="Etiquetas_A_Decodificar" style="padding-left:3px" runat="server" Height="35px" Width="95%"></asp:TextBox></td>
                     <td style="width:10%"><asp:TextBox ID="Etiqueta_Decodificadora" style="text-align:center" runat="server" Height="35px" Width="95%"></asp:TextBox></td>
-                    <td style="width:45%"><asp:DropDownList ID="DropDownList_Tipo_De_Etiqueta" runat="server" Height="35px" Width="95%">                        
+                    <td style="width:45%"><asp:DropDownList ID="DropDownList_Tipo_De_Etiqueta" runat="server" Height="35px" Width="95%" EnableViewState = "true">                        
                         <asp:ListItem Value="2">Temas</asp:ListItem>                        
                         <asp:ListItem Value="3">Colegios</asp:ListItem>
                         <asp:ListItem Value="4">Años</asp:ListItem>

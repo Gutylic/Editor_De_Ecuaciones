@@ -10,6 +10,8 @@ namespace Logica
     {
 
         DataClassesDataContext db = new DataClassesDataContext();
+        int? Cantidad_De_Datos;
+
 
         public string Corregir_Etiqueta(string Dato)
         {
@@ -287,15 +289,12 @@ namespace Logica
 
         }
        
-        public void Agregar_Etiqueta_Anos(string Etiqueta)
+        public int? Agregar_Etiqueta(string Etiqueta, int Tabla)
         {
             Etiqueta = Corregir_Etiqueta(Etiqueta);
-            Tabla_De_Anos Etiqueta_Final = new Tabla_De_Anos();
-            int Codigo_Numerico = db.Tabla_De_Anos.Max(p => p.Etiqueta_Ano);
-            Etiqueta_Final.Etiqueta_Ano = Codigo_Numerico + 1;
-            Etiqueta_Final.Ano = Etiqueta;
-            db.Tabla_De_Anos.InsertOnSubmit(Etiqueta_Final);
-            db.SubmitChanges();
+
+            db.Agregar_Etiqueta_Homonima(Etiqueta, Tabla, ref Cantidad_De_Datos);
+            return Cantidad_De_Datos;
 
         }
         public int Modificar_Etiqueta_Anos(string Etiqueta_1, string Etiqueta_2)

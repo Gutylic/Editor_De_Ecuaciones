@@ -35,6 +35,7 @@ namespace index
 
         public void Cargar_Variables_De_URL(string Enunciado_1, string Enunciado_2, string Enunciado_3, string Enunciado_4, string Enunciado_5)
         {
+                       
 
             ViewState["Tema"] = LB.Buscar_Tema(Enunciado_1); // recupera desde el URL el Enunciado1
             ViewState["Materia"] = LB.Buscar_Materia(Enunciado_2); // recupera desde el URL el Enunciado1
