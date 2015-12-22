@@ -20,9 +20,10 @@ namespace index
             {
                 return;
             }
+            string Cadena = TextBox_Videos.Text.Replace("\r", " ");
+            Cadena = Cadena.Replace("\n", " ");
 
-
-            string Cadena = @"window.open('buscar_videos.aspx?Videos=" + TextBox_Videos.Text.Trim().ToLower() + "','_blank');";
+            Cadena = @"window.open('buscar_videos.aspx?Videos=" + TextBox_Videos.Text.Trim().ToLower() + "','_blank');";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
         }
     }

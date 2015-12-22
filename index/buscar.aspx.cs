@@ -31,11 +31,13 @@ namespace index
                 string sLine = obj.ReadLine();
                 obj.Close();
                 TextBox_MATH.Text = sLine;
+                return;
 
             }
             else 
             {
                 TextBox_MATH.Text = string.Empty;
+                return;
             }
 
         }
@@ -123,8 +125,11 @@ namespace index
             {
                 return;
             }
-            
-            string Cadena = @"window.open('buscar_x_clave.aspx?Enunciado=" + TextBox_MATH.Text.ToLower().Trim() + "','_blank');";
+
+            string Cadena = TextBox_MATH.Text.Replace("\r", " ");
+            Cadena = Cadena.Replace("\n", " ");
+
+            Cadena = @"window.open('buscar_x_clave.aspx?Enunciado=" + TextBox_MATH.Text.ToLower().Trim() + "','_blank');";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "", Cadena, true);
         }
 
