@@ -518,13 +518,6 @@ namespace Logica
 			return ((ISingleResult<Mostrar_Ejercicios_Por_Profundidad_Del_EnunciadoResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado")]
-		public new ISingleResult<Vista_Buscar_Ejercicios> Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var1", DbType="NVarChar(20)")] string var1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var2", DbType="NVarChar(20)")] string var2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var3", DbType="NVarChar(20)")] string var3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var4", DbType="NVarChar(20)")] string var4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var5", DbType="NVarChar(20)")] string var5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var6", DbType="NVarChar(20)")] string var6, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var7", DbType="NVarChar(20)")] string var7, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var8", DbType="NVarChar(20)")] string var8, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var9", DbType="NVarChar(20)")] string var9, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var10", DbType="NVarChar(20)")] string var10)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
-			return ((ISingleResult<Vista_Buscar_Ejercicios>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Ficha_Completa")]
 		public ISingleResult<Tabla_De_Ejercicios> Mostrar_Ejercicios_Por_Ficha_Completa([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor", DbType="NVarChar(150)")] string profesor, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano", DbType="NVarChar(150)")] string ano, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio", DbType="NVarChar(150)")] string colegio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Materia", DbType="NVarChar(150)")] string materia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema", DbType="NVarChar(150)")] string tema)
 		{
@@ -602,6 +595,13 @@ namespace Logica
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), etiqueta, tabla, valor);
 			valor = ((System.Nullable<int>)(result.GetParameterValue(2)));
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado")]
+		public ISingleResult<Vista_Buscar_Ejercicios> Mostrar_Ejercicios_Por_Palabras_Claves_Del_Enunciado([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var1", DbType="NVarChar(20)")] string var1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var2", DbType="NVarChar(20)")] string var2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var3", DbType="NVarChar(20)")] string var3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var4", DbType="NVarChar(20)")] string var4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var5", DbType="NVarChar(20)")] string var5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var6", DbType="NVarChar(20)")] string var6, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var7", DbType="NVarChar(20)")] string var7, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var8", DbType="NVarChar(20)")] string var8, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var9", DbType="NVarChar(20)")] string var9, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Var10", DbType="NVarChar(20)")] string var10)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
+			return ((ISingleResult<Vista_Buscar_Ejercicios>)(result.ReturnValue));
 		}
 	}
 	

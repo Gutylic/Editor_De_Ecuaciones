@@ -19,6 +19,5 @@ C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.p
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll.config
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.pdb
-C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.dll
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.pdb
