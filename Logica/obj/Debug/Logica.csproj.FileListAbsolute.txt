@@ -21,3 +21,4 @@ C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.pdb
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.dll
 C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache

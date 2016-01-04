@@ -6,110 +6,110 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Mara\Desktop\martina</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\editor</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/index.dll">
-      <publishTime>12/24/2015 01:14:39</publishTime>
+      <publishTime>01/04/2016 20:21:21</publishTime>
     </File>
     <File Include="bin/Logica.dll">
-      <publishTime>12/24/2015 01:14:38</publishTime>
+      <publishTime>01/04/2016 20:21:19</publishTime>
     </File>
     <File Include="buscar.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_videos.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_x_clave.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_x_ficha.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_x_institucion.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_x_porcentaje.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="buscar_x_profundidad.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="Cargar_Administradores.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="Cargar_Archivos.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="css/bootstrap.css">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="css/bootstrap.min.css">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="css/shop-item.css">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="decodificador.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="etiquetas.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="homonimos.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="index.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="index1.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="js/bootstrap.js">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="js/bootstrap.min.js">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="js/jquery.js">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="lector.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="lector1.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="respuesta.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="Vaciar_Base.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="Video.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
     <File Include="WebForm1.aspx">
-      <publishTime>12/24/2015 00:28:22</publishTime>
+      <publishTime>01/04/2016 18:41:10</publishTime>
     </File>
   </ItemGroup>
 </Project>

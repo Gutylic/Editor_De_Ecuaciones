@@ -41,8 +41,8 @@ namespace index
                     TextBox_Ano.Text = datos[27];
                     TextBox_Colegio.Text = datos[28];
                     TextBox_Materia.Text = datos[29];
-                    TextBox_Tema.Text = datos[30];
-                    TextBox_Profesor.Text = datos[31];
+                    TextBox_Tema.Text = datos[31];
+                    TextBox_Profesor.Text = datos[30];
                     Nombre_Del_Archivo.Text = " " + Session["Nombre_Del_Archivo"].ToString();
                 }
                 else
@@ -62,6 +62,10 @@ namespace index
                     TextBox_Ano1.Text = Session["A1"].ToString();
                     TextBox_Ano2.Text = Session["A2"].ToString();
                     TextBox_Ano3.Text = Session["A3"].ToString();
+                    TextBox_Profesor1.Text = Session["P1"].ToString(); 
+                    TextBox_Profesor2.Text = Session["P2"].ToString();
+                    TextBox_Profesor3.Text = Session["P3"].ToString();
+
 
                 }
             }

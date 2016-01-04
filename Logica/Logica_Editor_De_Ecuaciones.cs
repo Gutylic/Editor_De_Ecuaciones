@@ -13,16 +13,21 @@ namespace Logica
         DataClassesDataContext db = new DataClassesDataContext();
         string Etiqueta_Armada;
         string Respuesta;
+        
+        string Ubicacion1 = RandomString(15);
+        string Ubicacion2 = RandomString(15);
 
         public int Insertar_En_Tabla_Primera_Parte(string Enunciado_MATH, string Titulo, string Ubicacion_Video_Y_Explicaciones, int Tipo_De_Institucion, int Tipo_De_Ejercicio, string Explicacion_Realizada)
         {
             
+
             if (Ubicacion_Video_Y_Explicaciones == string.Empty) 
             {
                 Ubicacion_Video_Y_Explicaciones = null;
-                return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, RandomString(15), RandomString(15), Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
+                
+                return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio,Ubicacion1 ,Ubicacion2, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
             }
-            return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, RandomString(15), RandomString(15), Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
+            return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion1, Ubicacion2, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
         }
 
         public string Quitar_Encabezado_Y_Final_MATH(string Enunciado_MATH)
@@ -72,11 +77,11 @@ namespace Logica
             return Linea; // variable final limpia de wiris
         }
 
-        private readonly Random _rng = new Random();
+        public static readonly Random _rng = new Random();
 
         private const string _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890qwertyuiopasdfghjklzxcvbnm";
 
-        private string RandomString(int size)
+        public static string RandomString(int size)
         {
 
             char[] buffer = new char[size];
@@ -233,9 +238,9 @@ namespace Logica
             Archivo.Write("╝");
             Archivo.Write(Ejercicio);
             Archivo.Write("╝");
-            Archivo.Write(RandomString(15));
+            Archivo.Write(Ubicacion1);
             Archivo.Write("╝");
-            Archivo.Write(RandomString(15));
+            Archivo.Write(Ubicacion2);
             Archivo.Write("╝");
             Archivo.Write(Video);
             Archivo.Write("╝");

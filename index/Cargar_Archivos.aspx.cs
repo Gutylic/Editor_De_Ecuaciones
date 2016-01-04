@@ -20,6 +20,7 @@ namespace index
 
         protected void Boton_Cargar_Click(object sender, EventArgs e)
         {
+            
             if (LAC.Analizar_Existencia_Ejercicio(int.Parse(TextBox_Numero_De_Ejercicio.Text)) != 1)
             {
                 string Mensaje = @"<script type='text/javascript'>   
