@@ -1,0 +1,30 @@
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.dll.config
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.dll
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.dll
+C:\Users\Guty\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.dll.config
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.dll
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.dll
+C:\Users\Mara\Desktop\Editor De Ecuaciones\Ecuaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll.config
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.dll
+C:\Users\Gustavo\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll.config
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.dll
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll.config
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.dll
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\bin\Debug\Logica.pdb
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.dll
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\Logica\obj\Debug\Logica.pdb

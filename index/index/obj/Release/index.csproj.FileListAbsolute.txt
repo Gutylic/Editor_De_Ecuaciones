@@ -1,0 +1,16 @@
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\bin\index.dll.config
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\bin\index.dll
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\bin\index.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\bin\Logica.dll
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\bin\Logica.pdb
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\obj\Release\index.csprojResolveAssemblyReference.cache
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\obj\Release\index.dll
+C:\Users\Mara\Desktop\Editor_De_Ecuaciones\index\obj\Release\index.pdb
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\bin\index.dll.config
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\bin\index.dll
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\bin\index.pdb
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\bin\Logica.dll
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\bin\Logica.pdb
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\obj\Release\index.csprojResolveAssemblyReference.cache
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\obj\Release\index.dll
+C:\Users\Mara\Documents\GitHub\Editor_De_Ecuaciones\index\obj\Release\index.pdb
