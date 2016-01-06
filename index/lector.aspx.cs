@@ -15,21 +15,44 @@ namespace index
         {
             if (Session["Anterior"] != null)
             {
-                string[] datos = Session["Datos"].ToString().Split('╝');
-                Session["Contenido_Wiris"] = Session["Contenido_Corregido_Wiris"].ToString();
-                Titulo.Text = Session["Titulo"].ToString();
-                DropDownList_Institucion.SelectedValue = Session["DropDownList_Institucion"].ToString();
-                DropDownList_Tipo.SelectedValue = Session["DropDownList_Tipo"].ToString();
-                Ubicacion_De_Impresion.Text = Session["Ubicacion_De_Impresion"].ToString();
-                Ubicacion_Del_Ejercicio.Text = Session["Ubicacion_Del_Ejercicio"].ToString();
-                Ubicacion_Del_Video_Y_Explicacion.Text = Session["Ubicacion_Del_Video_Y_Explicacion"].ToString();
-                DropDownList_Enunciado_Realizado.SelectedValue = Session["DropDownList_Enunciado_Realizado"].ToString();
-                Session["Siguiente"] = 1;
+
+                
+
+                if ((int)Session["Anterior"] == 1)
+                {
+
+                    string[] datos = Session["Datos"].ToString().Split('╝');
+                    Session["Contenido_Wiris"] = Session["Contenido_Corregido_Wiris"].ToString();
+                    Titulo.Text = Session["Titulo"].ToString();
+                    DropDownList_Institucion.SelectedValue = Session["DropDownList_Institucion"].ToString();
+                    DropDownList_Tipo.SelectedValue = Session["DropDownList_Tipo"].ToString();
+                    Ubicacion_De_Impresion.Text = Session["Ubicacion_De_Impresion"].ToString();
+                    Ubicacion_Del_Ejercicio.Text = Session["Ubicacion_Del_Ejercicio"].ToString();
+                    Ubicacion_Del_Video_Y_Explicacion.Text = Session["Ubicacion_Del_Video_Y_Explicacion"].ToString();
+                    DropDownList_Enunciado_Realizado.SelectedValue = Session["DropDownList_Enunciado_Realizado"].ToString();
+                    Session["Siguiente"] = 1;
+
+                }
+
+                if ((int)Session["Anterior"] == 2)
+                {
+                    Session["Siguiente"] = null;
+                    Titulo.Text = string.Empty;
+                    Session["Contenido_Wiris"] = null;
+                    Contenido_Wiris.Value = null;
+                    Session["Anterior"] = null;
+                }
+
+
             }
-            else 
-            {
-                Session["Siguiente"] = null;
+            else
+            { 
+            
+               Session["Siguiente"] = null;
+                   
+               
             }
+            
           
         }
 
@@ -64,15 +87,15 @@ namespace index
             Session["Datos"] = texto;
             string[] datos = Session["Datos"].ToString().Split('╝');            
             Session["Contenido_Wiris"] = datos[0];
-            Titulo.Text = datos[2];
+            Session["Titulo"] = datos[2];
             DropDownList_Institucion.SelectedValue = datos[3].ToString();
             DropDownList_Tipo.SelectedValue = datos[4].ToString();
             Ubicacion_De_Impresion.Text = datos[5];
             Ubicacion_Del_Ejercicio.Text = datos[6];
             Ubicacion_Del_Video_Y_Explicacion.Text = datos[7];
             DropDownList_Enunciado_Realizado.SelectedValue = datos[8].ToString();
-            Session["Nombre_Del_Archivo"] = Subir_Ejercicio.FileName.Substring(0, 9) + " " + Subir_Ejercicio.FileName.Substring(9, Subir_Ejercicio.FileName.Length - 13);
-
+            Session["Nombre_Del_Archivo"] = Subir_Ejercicio.FileName.Substring(0, 9) + " " +  Subir_Ejercicio.FileName.Substring(9, Subir_Ejercicio.FileName.Length - 13);
+            Titulo.Text = datos[2];
 
             if (Titulo.Text == string.Empty)
             {
@@ -89,7 +112,15 @@ namespace index
         protected void Siguiente_Click(object sender, EventArgs e)
         {
             Session["Contenido_Wiris"] = Contenido_Wiris.Value;
-           
+
+            if (Titulo.Text == string.Empty)
+            {
+                string Fallo = @"<script type='text/javascript'>   
+                                   alert('No puede quedar la caja del título vacio');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
+                return;
+            }
 
             if (Session["fileName"] == null)
             {
@@ -117,6 +148,7 @@ namespace index
                 return;
             }
 
+            Session["Anterior"] = 1;
             Session["Titulo"] = Titulo.Text;
             Session["Ubicacion_Del_Video_Y_Explicacion"] = Ubicacion_Del_Video_Y_Explicacion.Text;
             Session["DropDownList_Tipo"] = int.Parse(DropDownList_Tipo.SelectedValue);

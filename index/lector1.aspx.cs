@@ -15,6 +15,7 @@ namespace index
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
                
@@ -70,6 +71,12 @@ namespace index
                         TextBox_Profesor1.Text = Session["P1"].ToString();
                         TextBox_Profesor2.Text = Session["P2"].ToString();
                         TextBox_Profesor3.Text = Session["P3"].ToString();
+                        TextBox_Ano.Text = Session["A"].ToString();
+                        TextBox_Colegio.Text = Session["C"].ToString();
+                        TextBox_Materia.Text = Session["M"].ToString();
+                        TextBox_Tema.Text = Session["T"].ToString();
+                        TextBox_Profesor.Text = Session["P"].ToString();
+                        Nombre_Del_Archivo.Text = " " + Session["Nombre_Del_Archivo"].ToString();
                     }
 
                     catch {
@@ -80,14 +87,27 @@ namespace index
 
 
                 }
-            }
-            
 
+               
+
+
+            }
+
+           
         }
 
         protected void Anterior_Click(object sender, EventArgs e)
         {
-            Session["Anterior"] = 1;
+
+            if ((int)Session["Anterior"] == 2)
+            {
+                Session["Anterior"] = 2;
+            }
+            else
+            { 
+                Session["Anterior"] = 1;
+            }
+            
             Session["T1S"] = TextBox_Tema1_S.Text;
             Session["T2S"] = TextBox_Tema2_S.Text;
             Session["T3S"] = TextBox_Tema3_S.Text;
@@ -103,13 +123,21 @@ namespace index
             Session["A1"] = TextBox_Ano1.Text;
             Session["A2"] = TextBox_Ano2.Text;
             Session["A3"] = TextBox_Ano3.Text;
+            Session["P1"] = TextBox_Profesor1.Text;
+            Session["P2"] = TextBox_Profesor2.Text;
+            Session["P3"] = TextBox_Profesor3.Text;
+            Session["T"] = TextBox_Tema.Text;
+            Session["A"] = TextBox_Ano.Text;
+            Session["P"] = TextBox_Profesor.Text;
+            Session["M"] = TextBox_Materia.Text;
+            Session["C"] = TextBox_Colegio.Text;
             Response.Redirect("lector.aspx");
             
         }
 
         protected void Actualizar_Ejercicio_Click(object sender, EventArgs e)
         {
-            Session.Remove("Anterior");
+            Session["Anterior"] = 2;
             Actualizar_Ejercicio.Enabled = false;
             string Identificadora = (((string)Session["fileName"]).Substring(9));
             int Identificador = int.Parse(Identificadora.Substring(0, Identificadora.Length-4));
@@ -166,6 +194,13 @@ namespace index
 
             LLDA.Actualizar_Un_Archivo_TXT((string)Session["fileName"],(string)Session["Contenido_Wiris"], (string)Session["Titulo"], Session["DropDownList_Institucion"].ToString(), Session["DropDownList_Tipo"].ToString(),(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"], Session["DropDownList_Enunciado_Realizado"].ToString(), Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3, TextBox_Ano.Text, TextBox_Colegio.Text, TextBox_Materia.Text, TextBox_Profesor.Text, TextBox_Tema.Text);
 
+            Session["T"] = string.Empty;
+            Session["A"] = string.Empty;
+            Session["P"] = string.Empty;
+            Session["M"] = string.Empty;
+            Session["C"] = string.Empty;
+            Session["Contenido_Wiris"] = string.Empty;
+            Session["Titulo"] = string.Empty;
         }
     }
 }
