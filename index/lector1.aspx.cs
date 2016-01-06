@@ -17,6 +17,8 @@ namespace index
         {
             if (!Page.IsPostBack) // se carga la primera vez al abrir la pagina
             {
+               
+
                 if (Session["Siguiente"] == null)
                 {
                     string[] datos = Session["Datos"].ToString().Split('╝');
@@ -41,30 +43,40 @@ namespace index
                     TextBox_Ano.Text = datos[27];
                     TextBox_Colegio.Text = datos[28];
                     TextBox_Materia.Text = datos[29];
-                    TextBox_Tema.Text = datos[31];
-                    TextBox_Profesor.Text = datos[30];
+                    TextBox_Tema.Text = datos[30];
+                    TextBox_Profesor.Text = datos[31];
                     Nombre_Del_Archivo.Text = " " + Session["Nombre_Del_Archivo"].ToString();
                 }
                 else
                 {
-                    TextBox_Tema1_S.Text = Session["T1S"].ToString();
-                    TextBox_Tema2_S.Text = Session["T2S"].ToString();
-                    TextBox_Tema3_S.Text = Session["T3S"].ToString();
-                    TextBox_Tema1.Text = Session["T1"].ToString();
-                    TextBox_Tema2.Text = Session["T2"].ToString();
-                    TextBox_Tema3.Text = Session["T3"].ToString();
-                    TextBox_Materia1.Text = Session["M1"].ToString();
-                    TextBox_Materia2.Text = Session["M2"].ToString();
-                    TextBox_Materia3.Text = Session["M3"].ToString();
-                    TextBox_Colegio1.Text = Session["C1"].ToString();
-                    TextBox_Colegio2.Text = Session["C2"].ToString();
-                    TextBox_Colegio3.Text = Session["C3"].ToString();
-                    TextBox_Ano1.Text = Session["A1"].ToString();
-                    TextBox_Ano2.Text = Session["A2"].ToString();
-                    TextBox_Ano3.Text = Session["A3"].ToString();
-                    TextBox_Profesor1.Text = Session["P1"].ToString(); 
-                    TextBox_Profesor2.Text = Session["P2"].ToString();
-                    TextBox_Profesor3.Text = Session["P3"].ToString();
+                    try
+                    {
+
+                        TextBox_Tema1_S.Text = Session["T1S"].ToString();
+                        TextBox_Tema2_S.Text = Session["T2S"].ToString();
+                        TextBox_Tema3_S.Text = Session["T3S"].ToString();
+                        TextBox_Tema1.Text = Session["T1"].ToString();
+                        TextBox_Tema2.Text = Session["T2"].ToString();
+                        TextBox_Tema3.Text = Session["T3"].ToString();
+                        TextBox_Materia1.Text = Session["M1"].ToString();
+                        TextBox_Materia2.Text = Session["M2"].ToString();
+                        TextBox_Materia3.Text = Session["M3"].ToString();
+                        TextBox_Colegio1.Text = Session["C1"].ToString();
+                        TextBox_Colegio2.Text = Session["C2"].ToString();
+                        TextBox_Colegio3.Text = Session["C3"].ToString();
+                        TextBox_Ano1.Text = Session["A1"].ToString();
+                        TextBox_Ano2.Text = Session["A2"].ToString();
+                        TextBox_Ano3.Text = Session["A3"].ToString();
+                        TextBox_Profesor1.Text = Session["P1"].ToString();
+                        TextBox_Profesor2.Text = Session["P2"].ToString();
+                        TextBox_Profesor3.Text = Session["P3"].ToString();
+                    }
+
+                    catch {
+                        return;
+                    }
+
+                    
 
 
                 }
@@ -146,11 +158,11 @@ namespace index
 
             LLDA.Actualizar_En_Tabla_Tercera_Parte(Identificador, Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
-            TextBox_Ano.Text = LLDA.Obtener_Ano();
-            TextBox_Materia.Text = LLDA.Obtener_Materia();
-            TextBox_Colegio.Text = LLDA.Obtener_Colegio();
-            TextBox_Profesor.Text = LLDA.Obtener_Profesor();
-            TextBox_Tema.Text = LLDA.Obtener_Tema();
+            TextBox_Ano.Text = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]);
+            TextBox_Materia.Text = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]);
+            TextBox_Colegio.Text = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]);
+            TextBox_Profesor.Text = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]);
+            TextBox_Tema.Text = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]);
 
             LLDA.Actualizar_Un_Archivo_TXT((string)Session["fileName"],(string)Session["Contenido_Wiris"], (string)Session["Titulo"], Session["DropDownList_Institucion"].ToString(), Session["DropDownList_Tipo"].ToString(),(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"], Session["DropDownList_Enunciado_Realizado"].ToString(), Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3, TextBox_Ano.Text, TextBox_Colegio.Text, TextBox_Materia.Text, TextBox_Profesor.Text, TextBox_Tema.Text);
 

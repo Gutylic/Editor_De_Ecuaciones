@@ -603,6 +603,46 @@ namespace Logica
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
 			return ((ISingleResult<Vista_Buscar_Ejercicios>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Obtener_Etiqueta_Anos_Actualizar")]
+		public int Obtener_Etiqueta_Anos_Actualizar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Respuesta", DbType="NVarChar(60)")] ref string respuesta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, respuesta);
+			respuesta = ((string)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Obtener_Etiqueta_Colegios_Actualizar")]
+		public int Obtener_Etiqueta_Colegios_Actualizar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Respuesta", DbType="NVarChar(60)")] ref string respuesta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, respuesta);
+			respuesta = ((string)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Obtener_Etiqueta_Materias_Actualizar")]
+		public int Obtener_Etiqueta_Materias_Actualizar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Respuesta", DbType="NVarChar(60)")] ref string respuesta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, respuesta);
+			respuesta = ((string)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Obtener_Etiqueta_Profesores_Actualizar")]
+		public int Obtener_Etiqueta_Profesores_Actualizar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Respuesta", DbType="NVarChar(60)")] ref string respuesta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, respuesta);
+			respuesta = ((string)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Obtener_Etiqueta_Tema_Actualizar")]
+		public int Obtener_Etiqueta_Tema_Actualizar([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID", DbType="Int")] System.Nullable<int> iD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Respuesta", DbType="NVarChar(60)")] ref string respuesta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD, respuesta);
+			respuesta = ((string)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tabla_Busqueda_De_Ejercicios_Por_Etiquetas")]

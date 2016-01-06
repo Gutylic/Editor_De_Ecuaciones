@@ -176,31 +176,31 @@ namespace Logica
             return Dato;
         }
 
-        public string Obtener_Profesor()
+        public string Obtener_Profesor_Actualizar(int Identificador)
         {
-            db.Obtener_Etiqueta_Profesores(ref Respuesta);
+            db.Obtener_Etiqueta_Profesores_Actualizar(Identificador, ref Respuesta);
             return Respuesta;
         }
-        public string Obtener_Tema()
+        public string Obtener_Tema_Actualizar(int Identificador)
         {
-            db.Obtener_Etiqueta_Tema(ref Respuesta);
+            db.Obtener_Etiqueta_Tema_Actualizar(Identificador, ref Respuesta);
             return Respuesta;
         }
-        public string Obtener_Colegio()
+        public string Obtener_Colegio_Actualizar(int Identificador)
         {
-            db.Obtener_Etiqueta_Colegios(ref Respuesta);
-            return Respuesta;
-        }
-
-        public string Obtener_Ano()
-        {
-            db.Obtener_Etiqueta_Anos(ref Respuesta);
+            db.Obtener_Etiqueta_Colegios_Actualizar(Identificador, ref Respuesta);
             return Respuesta;
         }
 
-        public string Obtener_Materia()
+        public string Obtener_Ano_Actualizar(int Identificador)
         {
-            db.Obtener_Etiqueta_Materias(ref Respuesta);
+            db.Obtener_Etiqueta_Anos_Actualizar(Identificador, ref Respuesta);
+            return Respuesta;
+        }
+
+        public string Obtener_Materia_Actualizar(int Identificador)
+        {
+            db.Obtener_Etiqueta_Materias_Actualizar(Identificador, ref Respuesta);
             return Respuesta;
         }
         
@@ -279,9 +279,9 @@ namespace Logica
             Archivo.Write("╝");
             Archivo.Write(Etiqueta_Materia);
             Archivo.Write("╝");
-            Archivo.Write(Etiqueta_Profesor);
-            Archivo.Write("╝");
             Archivo.Write(Etiqueta_Tema);
+            Archivo.Write("╝");
+            Archivo.Write(Etiqueta_Profesor);
             Archivo.Flush();
             Archivo.Close();
 

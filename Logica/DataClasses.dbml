@@ -458,4 +458,29 @@
     <Parameter Name="Var10" Parameter="var10" Type="System.String" DbType="NVarChar(20)" />
     <ElementType IdRef="ID8" />
   </Function>
+  <Function Name="dbo.Obtener_Etiqueta_Anos_Actualizar" Method="Obtener_Etiqueta_Anos_Actualizar">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Obtener_Etiqueta_Colegios_Actualizar" Method="Obtener_Etiqueta_Colegios_Actualizar">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Obtener_Etiqueta_Materias_Actualizar" Method="Obtener_Etiqueta_Materias_Actualizar">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Obtener_Etiqueta_Profesores_Actualizar" Method="Obtener_Etiqueta_Profesores_Actualizar">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Obtener_Etiqueta_Tema_Actualizar" Method="Obtener_Etiqueta_Tema_Actualizar">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

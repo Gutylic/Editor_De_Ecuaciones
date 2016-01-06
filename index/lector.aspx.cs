@@ -46,6 +46,7 @@ namespace index
             {
                 string Identificadora = (((string)Session["fileName"]).Substring(9));
                 int Identificador = int.Parse(Identificadora.Substring(0, Identificadora.Length - 4));
+                Session["ID"] = Identificador;
             }
 
             catch 
@@ -87,6 +88,8 @@ namespace index
 
         protected void Siguiente_Click(object sender, EventArgs e)
         {
+            Session["Contenido_Wiris"] = Contenido_Wiris.Value;
+           
 
             if (Session["fileName"] == null)
             {
