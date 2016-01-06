@@ -71,7 +71,7 @@ namespace Logica
             Linea = Linea.Replace("&#211;", "o");
             Linea = Linea.Replace("&#218;", "u");
             Linea = Linea.Replace("&#209;", "n");
-
+            Linea = Linea.Replace("&#x000bf;", "¿");
 
             Linea = Linea.Replace("&#x000e1;", "a");
             Linea = Linea.Replace("&#x000e9;", "e");

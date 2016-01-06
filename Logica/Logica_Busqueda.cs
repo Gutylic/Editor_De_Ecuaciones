@@ -50,7 +50,7 @@ namespace Logica
         {
             Enunciado = Enunciado.Remove(0, 49); // quitar los cararcteres de adelante
             Enunciado = Enunciado.Remove(Enunciado.Length - 7, 7).ToLower(); // sacar los de atras y poner en minusculas
-            Enunciado = Enunciado.Replace("&#x000A0;", "");
+            Enunciado = Enunciado.Replace("&#x000A0;", " ");
             Enunciado = Enunciado.Replace("<mo></mo>", "");
             Enunciado = Enunciado.Replace("&#x000e1;", "a");
             Enunciado = Enunciado.Replace("&#x000e9;", "e");
@@ -64,7 +64,8 @@ namespace Logica
             Enunciado = Enunciado.Replace("&#x000cd;", "i");
             Enunciado = Enunciado.Replace("&#x000d3;", "o");
             Enunciado = Enunciado.Replace("&#x000dc;", "u");
-            Enunciado = Enunciado.Replace("&#x000da;", "u");                       
+            Enunciado = Enunciado.Replace("&#x000da;", "u");
+            Enunciado = Enunciado.Replace("&#x000bf;", "¿");
             return Enunciado = Enunciado.Replace("&#x000fc;", "u");
         }
 
