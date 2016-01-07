@@ -73,7 +73,7 @@ namespace index
 
             if (DropDownList_Tipo_De_Etiqueta.SelectedValue == "2")
             {
-                string[] Valor = LIE.Buscar_Etiquetas_Tema(datos[30]).Split(' ');
+                string[] Valor = LIE.Buscar_Etiquetas_Tema(datos[31]).Split(' ');
 
                 Cargando_Valores_Al_TextBox(Valor);
 
@@ -91,7 +91,7 @@ namespace index
 
             if (DropDownList_Tipo_De_Etiqueta.SelectedValue == "5")
             {
-                string[] Valor = LIE.Buscar_Etiquetas_Profesor(datos[31]).Split(' ');
+                string[] Valor = LIE.Buscar_Etiquetas_Profesor(datos[30]).Split(' ');
 
                 Cargando_Valores_Al_TextBox(Valor);
 
