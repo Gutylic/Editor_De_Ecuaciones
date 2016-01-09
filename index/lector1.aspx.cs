@@ -195,106 +195,72 @@ namespace index
 
 
 
-           
-            
+
+            string dato = string.Empty;
             string[] Etiqueta_Final = TextBox_Tema.Text.Split(' ');
             string[] Etiqueta_Inicial = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]).Split(' ');
 
+            List<string> Etiqueta = Etiqueta_Final.Union(Etiqueta_Inicial).ToList();
             
-            int Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
-
-            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            foreach (string t in Etiqueta)
             {
-                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
-                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+                dato = dato + " " + t;
             }
 
-            foreach (string t in Etiqueta_Final)
-            {
-                TextBox_Tema.Text = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]) + " " + t;
-            }
-
-           
+            TextBox_Tema.Text = dato;
 
 
+            string dato_1 = string.Empty;
             Etiqueta_Final = TextBox_Materia.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]).Split(' ');
 
-           
-             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
-
-            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            Etiqueta = Etiqueta_Final.Union(Etiqueta_Inicial).ToList();
+            foreach (string t in Etiqueta)
             {
-                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
-                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+                dato_1 = dato_1 + " " + t;
             }
 
-            foreach (string t in Etiqueta_Final)
-            {
-                TextBox_Materia.Text = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]) +" "+ t ;
-            }
+            TextBox_Materia.Text = dato_1;
 
-           
-
-
+            string dato_2 = string.Empty;
             Etiqueta_Final = TextBox_Ano.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]).Split(' ');
 
-            
-             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
-
-            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            Etiqueta = Etiqueta_Final.Union(Etiqueta_Inicial).ToList();
+            foreach (string t in Etiqueta)
             {
-                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
-                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+                dato_2 = dato_2 + " " + t;
             }
 
-            foreach (string t in Etiqueta_Final)
-            {
-                TextBox_Ano.Text = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]) + " " + t;
-            }
+            TextBox_Ano.Text = dato_2;
 
-            
-
-
-
+            string dato_3 = string.Empty;
             Etiqueta_Final = TextBox_Colegio.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]).Split(' ');
 
-            
-             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
-
-            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            Etiqueta = Etiqueta_Final.Union(Etiqueta_Inicial).ToList();
+            foreach (string t in Etiqueta)
             {
-                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
-                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+                dato_3 = dato_3 + " " + t;
             }
 
-            foreach (string t in Etiqueta_Final)
-            {
-                TextBox_Colegio.Text = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]) + " " + t;
-            }
-
-            
+            TextBox_Colegio.Text = dato_3;
 
 
 
+
+            string dato_4 = string.Empty;
             Etiqueta_Final = TextBox_Profesor.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]).Split(' ');
 
+            Etiqueta = Etiqueta_Final.Union(Etiqueta_Inicial).ToList();
+            foreach (string t in Etiqueta)
+            {
+                dato_4 = dato_4 + " " + t;
+            }
+
+            TextBox_Profesor.Text = dato_4;
             
-             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
-
-            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
-            {
-                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
-                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
-            }
-
-            foreach (string t in Etiqueta_Final)
-            {
-                TextBox_Profesor.Text = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]) + " " + t;
-            }
 
             
 

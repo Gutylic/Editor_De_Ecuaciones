@@ -213,7 +213,7 @@ namespace Logica
             string Materia3, string Colegio1, string Colegio2,
             string Colegio3, string Ano1, string Ano2,
             string Ano3, string Profesor1, string Profesor2, string Profesor3,
-            string Etiqueta_Ano, string Etiqueta_Colegio, string Etiqueta_Materia, string Etiqueta_Tema, string Etiqueta_Profesor) // carga dos archivos en c: correspondiente a los enunciados
+            string Etiqueta_Ano, string Etiqueta_Colegio, string Etiqueta_Materia, string Etiqueta_Profesor, string Etiqueta_Tema) // carga dos archivos en c: correspondiente a los enunciados
         {
 
 
@@ -279,9 +279,9 @@ namespace Logica
             Archivo.Write("╝");
             Archivo.Write(Etiqueta_Materia);
             Archivo.Write("╝");
-            Archivo.Write(Etiqueta_Tema);
-            Archivo.Write("╝");
             Archivo.Write(Etiqueta_Profesor);
+            Archivo.Write("╝");
+            Archivo.Write(Etiqueta_Tema);
             Archivo.Flush();
             Archivo.Close();
 
