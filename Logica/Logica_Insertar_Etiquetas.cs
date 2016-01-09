@@ -315,6 +315,14 @@ namespace Logica
         }
 
 
+        public void Actualizar_Tabla_Busqueda(int Identificador, string Ano, string Colegio, string Materia, string Tema, string Profesor)
+        {
+            db.Actualizar_Tabla_Busqueda(Identificador, Tema,  Materia,Colegio, Ano, Profesor);
+        }
+
+
+
+
         public void Actualizar_Un_Archivo_TXT(string Nombre_Archivo, string Enunciado, string Enunciado_Corregido,
            string Titulo, string Institucion, string Ejercicio, string Impresion, string Visible,
            string Video, string Explicacion, string Tema1_S, string Tema2_S,
@@ -388,9 +396,9 @@ namespace Logica
             Archivo.Write("╝");
             Archivo.Write(Etiqueta_Materia);
             Archivo.Write("╝");
-            Archivo.Write(Etiqueta_Tema);
-            Archivo.Write("╝");
             Archivo.Write(Etiqueta_Profesor);
+            Archivo.Write("╝");
+            Archivo.Write(Etiqueta_Tema);
             Archivo.Flush();
             Archivo.Close();
 

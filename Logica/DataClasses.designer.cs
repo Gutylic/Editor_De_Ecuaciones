@@ -643,6 +643,13 @@ namespace Logica
 			respuesta = ((string)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Actualizar_Tabla_Busqueda")]
+		public int Actualizar_Tabla_Busqueda([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Identificador", DbType="Int")] System.Nullable<int> identificador, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema", DbType="NVarChar(60)")] string tema, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Materia", DbType="NVarChar(60)")] string materia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio", DbType="NVarChar(60)")] string colegio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano", DbType="NVarChar(60)")] string ano, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor", DbType="NVarChar(60)")] string profesor)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificador, tema, materia, colegio, ano, profesor);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tabla_Busqueda_De_Ejercicios_Por_Etiquetas")]

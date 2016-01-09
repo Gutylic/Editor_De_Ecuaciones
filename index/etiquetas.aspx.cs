@@ -60,6 +60,23 @@ namespace index
             }
 
             Session["Archivo_Subido"] = Subir_Archivo.FileName;
+
+            try
+            {
+
+              
+
+
+                Session["valor"] = int.Parse(((Session["Archivo_Subido"].ToString()).Substring(9).Substring(0, (Session["Archivo_Subido"].ToString()).Substring(9).Length - 4)));
+                
+            }
+
+            catch
+            {
+                 return;
+            }
+
+            
             string filename = Path.Combine(Server.MapPath("~/corregido"), Subir_Archivo.FileName);
             Subir_Archivo.SaveAs(filename);
             StreamReader file = new StreamReader(filename, System.Text.Encoding.UTF8);
@@ -156,12 +173,24 @@ namespace index
             Etiqueta[14] = LIE.Buscar_Etiquetas(TextBox15.Text, "6");
 
 
+
+
+            LIE.Actualizar_Tabla_Busqueda((int)Session["valor"], LIE.Cargar_Etiqueta_Ano(Etiqueta[6], Etiqueta[7], Etiqueta[8], datos[27]),
+                LIE.Cargar_Etiqueta_Colegio(Etiqueta[3], Etiqueta[4], Etiqueta[5], datos[28]), LIE.Cargar_Etiqueta_Materia(Etiqueta[12], Etiqueta[13], Etiqueta[14], datos[29]),
+                LIE.Cargar_Etiqueta_Tema(Etiqueta[0], Etiqueta[1], Etiqueta[2], datos[31]), LIE.Cargar_Etiqueta_Profesor(Etiqueta[9], Etiqueta[10], Etiqueta[11], datos[30]));
+
+
+
+
+
+
+
             LIE.Actualizar_Un_Archivo_TXT(Session["Archivo_Subido"].ToString(),datos[0],datos[1],datos[2],
                 datos[3].ToString(),datos[4].ToString(),datos[5],datos[6],datos[7],datos[8].ToString(),
                 datos[9],datos[10],datos[11],datos[12],datos[13],datos[14],datos[15],datos[16],datos[17],
                 datos[18],datos[19],datos[20],datos[21],datos[22],datos[23],datos[24],datos[25],datos[26],LIE.Cargar_Etiqueta_Ano(Etiqueta[6],Etiqueta[7],Etiqueta[8],datos[27]),
                 LIE.Cargar_Etiqueta_Colegio(Etiqueta[3],Etiqueta[4],Etiqueta[5],datos[28]),LIE.Cargar_Etiqueta_Materia(Etiqueta[12],Etiqueta[13],Etiqueta[14],datos[29]),
-                LIE.Cargar_Etiqueta_Tema(Etiqueta[0],Etiqueta[1],Etiqueta[2],datos[30]),LIE.Cargar_Etiqueta_Profesor(Etiqueta[9],Etiqueta[10],Etiqueta[11],datos[31]));
+                LIE.Cargar_Etiqueta_Tema(Etiqueta[0],Etiqueta[1],Etiqueta[2],datos[31]),LIE.Cargar_Etiqueta_Profesor(Etiqueta[9],Etiqueta[10],Etiqueta[11],datos[30]));
 
            
            

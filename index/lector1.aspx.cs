@@ -44,8 +44,8 @@ namespace index
                     TextBox_Ano.Text = datos[27];
                     TextBox_Colegio.Text = datos[28];
                     TextBox_Materia.Text = datos[29];
-                    TextBox_Tema.Text = datos[30];
-                    TextBox_Profesor.Text = datos[31];
+                    TextBox_Tema.Text = datos[31];
+                    TextBox_Profesor.Text = datos[30];
                     Nombre_Del_Archivo.Text = " " + Session["Nombre_Del_Archivo"].ToString();
                 }
                 else
@@ -184,14 +184,124 @@ namespace index
 
             LLDA.Actualizar_En_Tabla_Segunda_Parte(Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
+           
+            
+            
+            
+            
+            
             LLDA.Actualizar_En_Tabla_Tercera_Parte(Identificador, Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
-            TextBox_Ano.Text = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]);
-            TextBox_Materia.Text = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]);
-            TextBox_Colegio.Text = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]);
-            TextBox_Profesor.Text = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]);
-            TextBox_Tema.Text = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]);
 
+
+
+           
+            
+            string[] Etiqueta_Final = TextBox_Tema.Text.Split(' ');
+            string[] Etiqueta_Inicial = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]).Split(' ');
+
+            
+            int Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
+
+            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            {
+                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
+                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+            }
+
+            foreach (string t in Etiqueta_Final)
+            {
+                TextBox_Tema.Text = LLDA.Obtener_Tema_Actualizar((int)Session["ID"]) + " " + t;
+            }
+
+           
+
+
+            Etiqueta_Final = TextBox_Materia.Text.Split(' ');
+            Etiqueta_Inicial = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]).Split(' ');
+
+           
+             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
+
+            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            {
+                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
+                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+            }
+
+            foreach (string t in Etiqueta_Final)
+            {
+                TextBox_Materia.Text = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]) +" "+ t ;
+            }
+
+           
+
+
+            Etiqueta_Final = TextBox_Ano.Text.Split(' ');
+            Etiqueta_Inicial = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]).Split(' ');
+
+            
+             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
+
+            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            {
+                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
+                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+            }
+
+            foreach (string t in Etiqueta_Final)
+            {
+                TextBox_Ano.Text = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]) + " " + t;
+            }
+
+            
+
+
+
+            Etiqueta_Final = TextBox_Colegio.Text.Split(' ');
+            Etiqueta_Inicial = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]).Split(' ');
+
+            
+             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
+
+            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            {
+                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
+                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+            }
+
+            foreach (string t in Etiqueta_Final)
+            {
+                TextBox_Colegio.Text = LLDA.Obtener_Colegio_Actualizar((int)Session["ID"]) + " " + t;
+            }
+
+            
+
+
+
+            Etiqueta_Final = TextBox_Profesor.Text.Split(' ');
+            Etiqueta_Inicial = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]).Split(' ');
+
+            
+             Resultado_Etiqueta_Inicial = Etiqueta_Inicial.Count();
+
+            for (int i = 0; i <= (Resultado_Etiqueta_Inicial - 1); i++)
+            {
+                int index = Array.IndexOf(Etiqueta_Final, Etiqueta_Inicial[i]);
+                Etiqueta_Final = Etiqueta_Final.Where((var, x) => x != index).ToArray();
+            }
+
+            foreach (string t in Etiqueta_Final)
+            {
+                TextBox_Profesor.Text = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]) + " " + t;
+            }
+
+            
+
+            
+
+
+                        
             LLDA.Actualizar_Un_Archivo_TXT((string)Session["fileName"],(string)Session["Contenido_Wiris"], (string)Session["Titulo"], Session["DropDownList_Institucion"].ToString(), Session["DropDownList_Tipo"].ToString(),(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"], Session["DropDownList_Enunciado_Realizado"].ToString(), Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3, TextBox_Ano.Text, TextBox_Colegio.Text, TextBox_Materia.Text, TextBox_Profesor.Text, TextBox_Tema.Text);
 
             Session["T"] = string.Empty;

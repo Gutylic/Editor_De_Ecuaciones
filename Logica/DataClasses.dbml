@@ -483,4 +483,13 @@
     <Parameter Name="Respuesta" Parameter="respuesta" Type="System.String" DbType="NVarChar(60)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Actualizar_Tabla_Busqueda" Method="Actualizar_Tabla_Busqueda">
+    <Parameter Name="Identificador" Parameter="identificador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tema" Parameter="tema" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Materia" Parameter="materia" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Colegio" Parameter="colegio" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Ano" Parameter="ano" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Profesor" Parameter="profesor" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
