@@ -57,8 +57,6 @@ namespace Logica
             // pongo todos los terminos en minusculas y saco los acentos
             Linea = Linea.ToLower();
             Linea = Linea.Replace("<mspace linebreak=\"newline\"/>", " ");
-            Linea = Linea.Replace("&#x000a0;", " ");
-            Linea = Linea.Replace("<mo></mo>", "");
             Linea = Linea.Replace("&#225;", "a");
             Linea = Linea.Replace("&#233;", "e");
             Linea = Linea.Replace("&#237;", "i");
@@ -71,6 +69,29 @@ namespace Logica
             Linea = Linea.Replace("&#211;", "o");
             Linea = Linea.Replace("&#218;", "u");
             Linea = Linea.Replace("&#209;", "n");
+            Linea = Linea.Replace("A", "a");
+            Linea = Linea.Replace("&#x000a0;", " ");
+            Linea = Linea.Replace("&#x000a1;", "¡");
+            Linea = Linea.Replace("&#x000bf;", "¿");
+            Linea = Linea.Replace("&quot;", "\"");
+            Linea = Linea.Replace("&#x000B4;", "´");
+            Linea = Linea.Replace("&amp;", "&");
+            Linea = Linea.Replace("<mo></mo>", "");
+            Linea = Linea.Replace("&#x000e1;", "a");
+            Linea = Linea.Replace("&#x000e9;", "e");
+            Linea = Linea.Replace("&#x000ed;", "i");
+            Linea = Linea.Replace("&#x000f3;", "o");
+            Linea = Linea.Replace("&#x000fa;", "u");
+            Linea = Linea.Replace("&#x000f1;", "n");
+            Linea = Linea.Replace("&#x000d1;", "n");
+            Linea = Linea.Replace("&#x000bf;", "¿");
+            Linea = Linea.Replace("&#x000c1;", "a");
+            Linea = Linea.Replace("&#x000c9;", "e");
+            Linea = Linea.Replace("&#x000cd;", "i");
+            Linea = Linea.Replace("&#x000d3;", "o");
+            Linea = Linea.Replace("&#x000dc;", "u");
+            Linea = Linea.Replace("&#x000da;", "u");
+            Linea = Linea.Replace("&#x000fc;", "u");
 
 
             Linea = Linea.Replace("&#x000e1;", "a");
