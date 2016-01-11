@@ -178,7 +178,7 @@ div.encabezado_panel {
                                 <table style="width: 100%;">
                                     <tr>
                                         <td style="width:70%; text-align:center"><asp:Label ID="Etiqueta_Video" runat="server" Text='<%# Eval("Ubicacion_Videos_Y_Explicaciones") %>'></asp:Label></td>
-                                        <td style="width:30%; text-align:center"><asp:Image ID="Imangen_Enunciado" ImageUrl='<%# "~/enunciados/Enunciado" + Eval("ID_Ejercicio") + ".png" %>' runat="server" /></td>
+                                        <td style="width:30%; text-align:center"><asp:Image ID="Imangen_Enunciado" ImageUrl='<%# "~/enunciado/Enunciado" + Eval("ID_Ejercicio") + ".png" %>' runat="server" /></td>
                                         
                                     </tr>
                                 </table>
