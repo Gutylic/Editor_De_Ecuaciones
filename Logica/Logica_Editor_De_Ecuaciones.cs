@@ -74,7 +74,7 @@ namespace Logica
             Linea = Linea.Replace("&#x000a1;", "¡");
             Linea = Linea.Replace("&#x000bf;", "¿");
             Linea = Linea.Replace("&quot;", "\"");
-            Linea = Linea.Replace("&#x000B4;", "´");
+            Linea = Linea.Replace("&#x000b4;", "´");
             Linea = Linea.Replace("&amp;", "&");
             Linea = Linea.Replace("<mo></mo>", "");
             Linea = Linea.Replace("&#x000e1;", "a");
@@ -108,6 +108,8 @@ namespace Logica
             Linea = Linea.Replace("&#x000dc;", "u");
             Linea = Linea.Replace("&#x000da;", "u");
             Linea = Linea.Replace("&#x000fc;", "u");
+            Linea = Linea.Replace("&#x000ba;", "º");
+            Linea = Linea.Replace("&#x02009;", "");
 
 
             Linea = Linea.Trim(); // elimino los espacios delante y detras de la variable creada
