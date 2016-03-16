@@ -64,6 +64,7 @@ namespace Logica
             Linea = Linea.Replace("&#250;", "u");
             Linea = Linea.Replace("&#160;", " ");
             Linea = Linea.Replace("&#193;", "a");
+            Linea = Linea.Replace("'", "´");
             Linea = Linea.Replace("&#201;", "e");
             Linea = Linea.Replace("&#205;", "i");
             Linea = Linea.Replace("&#211;", "o");
@@ -267,6 +268,7 @@ namespace Logica
 
             StreamWriter Archivo = File.CreateText("C:\\archivo/Ejercicio" + db.Tabla_De_Ejercicios.Max(c => c.ID_Ejercicio) + ".txt"); // carga el archivo corregido del enunciado en c:
             string Enunciado_Corregido = Enunciado_Limpio(Enunciado);
+            Enunciado = Enunciado.Replace("'", "´");
             Archivo.Write(Enunciado);
             Archivo.Write("╝");
             Archivo.Write(Enunciado_Corregido);

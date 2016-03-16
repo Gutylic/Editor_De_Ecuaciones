@@ -12,6 +12,7 @@ namespace index
     {
 
         Logica_Lector_De_Archivos LLDA = new Logica_Lector_De_Archivos();
+        Logica_Editor_De_Ecuaciones LEDE = new Logica_Editor_De_Ecuaciones();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -210,6 +211,8 @@ namespace index
             TextBox_Tema.Text = dato;
 
 
+
+
             string dato_1 = string.Empty;
             Etiqueta_Final = TextBox_Materia.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Materia_Actualizar((int)Session["ID"]).Split(' ');
@@ -222,6 +225,9 @@ namespace index
 
             TextBox_Materia.Text = dato_1;
 
+
+
+
             string dato_2 = string.Empty;
             Etiqueta_Final = TextBox_Ano.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Ano_Actualizar((int)Session["ID"]).Split(' ');
@@ -233,6 +239,8 @@ namespace index
             }
 
             TextBox_Ano.Text = dato_2;
+
+
 
             string dato_3 = string.Empty;
             Etiqueta_Final = TextBox_Colegio.Text.Split(' ');
@@ -249,6 +257,7 @@ namespace index
 
 
 
+
             string dato_4 = string.Empty;
             Etiqueta_Final = TextBox_Profesor.Text.Split(' ');
             Etiqueta_Inicial = LLDA.Obtener_Profesor_Actualizar((int)Session["ID"]).Split(' ');
@@ -260,10 +269,11 @@ namespace index
             }
 
             TextBox_Profesor.Text = dato_4;
-            
+
+
 
             
-
+                       
             
 
 
