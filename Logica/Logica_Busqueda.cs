@@ -80,7 +80,7 @@ namespace Logica
             Linea = Linea.Replace("&#x000a0;", " ");
             Linea = Linea.Replace("&#x000a1;", "¡");
             Linea = Linea.Replace("&#x000bf;", "¿");
-            Linea = Linea.Replace("&quot;", "\"");
+            Linea = Linea.Replace("&quot;", "´´");
             Linea = Linea.Replace("&#x000b4;", "´");
             Linea = Linea.Replace("&amp;", "&");
             Linea = Linea.Replace("<mo></mo>", "");

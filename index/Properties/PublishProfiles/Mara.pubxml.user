@@ -6,14 +6,14 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Mara\Desktop\Borrar</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Mara\Desktop\borrar</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/index.dll">
-      <publishTime>03/16/2016 15:22:36</publishTime>
+      <publishTime>03/17/2016 02:05:24</publishTime>
     </File>
     <File Include="bin/Logica.dll">
-      <publishTime>03/16/2016 15:22:35</publishTime>
+      <publishTime>03/17/2016 02:05:20</publishTime>
     </File>
     <File Include="buscar.aspx">
       <publishTime>01/10/2016 17:53:43</publishTime>
