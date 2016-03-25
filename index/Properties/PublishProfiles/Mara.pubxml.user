@@ -10,7 +10,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/index.dll">
-      <publishTime>03/17/2016 02:05:24</publishTime>
+      <publishTime>03/23/2016 14:44:52</publishTime>
     </File>
     <File Include="bin/Logica.dll">
       <publishTime>03/17/2016 02:05:20</publishTime>

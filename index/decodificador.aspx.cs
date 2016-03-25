@@ -23,29 +23,29 @@ namespace index
 
         protected void Boton_De_Decodificacion_Click(object sender, EventArgs e)
         {
-            if (Etiquetas_A_Decodificar.Text.StartsWith("m"))
-            {
-                Valor = LDE.Buscar_Etiquetas_Materias(Etiquetas_A_Decodificar.Text.Trim());
-            }
-            if (Etiquetas_A_Decodificar.Text.StartsWith("t"))
-            {
-                Valor = LDE.Buscar_Etiquetas_Temas(Etiquetas_A_Decodificar.Text.Trim());
-            }
-            if (Etiquetas_A_Decodificar.Text.StartsWith("p"))
-            {
-                Valor = LDE.Buscar_Etiquetas_Profesores(Etiquetas_A_Decodificar.Text.Trim());
-            }
-            if (Etiquetas_A_Decodificar.Text.StartsWith("a"))
-            {
-                Valor = LDE.Buscar_Etiquetas_Anos(Etiquetas_A_Decodificar.Text.Trim());
-            }
-            if (Etiquetas_A_Decodificar.Text.StartsWith("c"))
-            {
-                Valor = LDE.Buscar_Etiquetas_Colegios(Etiquetas_A_Decodificar.Text.Trim());
-            }
-
             try
             {
+                if (Etiquetas_A_Decodificar.Text.StartsWith("m"))
+                {
+                    Valor = LDE.Buscar_Etiquetas_Materias(Etiquetas_A_Decodificar.Text.Trim());
+                }
+                if (Etiquetas_A_Decodificar.Text.StartsWith("t"))
+                {
+                    Valor = LDE.Buscar_Etiquetas_Temas(Etiquetas_A_Decodificar.Text.Trim());
+                }
+                if (Etiquetas_A_Decodificar.Text.StartsWith("p"))
+                {
+                    Valor = LDE.Buscar_Etiquetas_Profesores(Etiquetas_A_Decodificar.Text.Trim());
+                }
+                if (Etiquetas_A_Decodificar.Text.StartsWith("a"))
+                {
+                    Valor = LDE.Buscar_Etiquetas_Anos(Etiquetas_A_Decodificar.Text.Trim());
+                }
+                if (Etiquetas_A_Decodificar.Text.StartsWith("c"))
+                {
+                    Valor = LDE.Buscar_Etiquetas_Colegios(Etiquetas_A_Decodificar.Text.Trim());
+                }
+                        
                 string[] Valor_Separado = Valor.Split(' ');
 
                 Dato = Valor_Separado.Length;
