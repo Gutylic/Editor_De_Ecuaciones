@@ -68,6 +68,7 @@ namespace index
             }
            
             Session["fileName"] = Subir_Ejercicio.FileName;
+            Session["Siguiente"] = null;
 
             try
             {

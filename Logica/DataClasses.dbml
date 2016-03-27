@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VPS_Ejercicios" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NUPHMRP;Initial Catalog=VPS_Ejercicios;Integrated Security=True" SettingsObjectName="Logica.Properties.Settings" SettingsPropertyName="EjerciciosConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=GUSTAVOPC;Initial Catalog=VPS_Ejercicios;Integrated Security=True" SettingsObjectName="Logica.Properties.Settings" SettingsPropertyName="EjerciciosConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tabla_Busqueda_De_Ejercicios_Por_Etiquetas" Member="Tabla_Busqueda_De_Ejercicios_Por_Etiquetas">
     <Type Name="Tabla_Busqueda_De_Ejercicios_Por_Etiquetas">
       <Column Name="ID_Ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -151,34 +151,10 @@
     <Parameter Name="Materia3" Parameter="materia3" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Temas" Method="Temas">
-    <Parameter Name="Tema1" Parameter="tema1" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Tema2" Parameter="tema2" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Tema3" Parameter="tema3" Type="System.String" DbType="NVarChar(60)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.Profesores" Method="Profesores">
     <Parameter Name="Profesor1" Parameter="profesor1" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Profesor2" Parameter="profesor2" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Profesor3" Parameter="profesor3" Type="System.String" DbType="NVarChar(60)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Sinonimos_Anos" Method="Sinonimos_Anos">
-    <Parameter Name="Ano1_S" Parameter="ano1_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Ano2_S" Parameter="ano2_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Ano3_S" Parameter="ano3_S" Type="System.String" DbType="NVarChar(60)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Sinonimos_Colegios" Method="Sinonimos_Colegios">
-    <Parameter Name="Colegio1_S" Parameter="colegio1_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Colegio2_S" Parameter="colegio2_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Colegio3_S" Parameter="colegio3_S" Type="System.String" DbType="NVarChar(60)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Sinonimos_Temas" Method="Sinonimos_Temas">
-    <Parameter Name="Tema1_S" Parameter="tema1_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Tema2_S" Parameter="tema2_S" Type="System.String" DbType="NVarChar(60)" />
-    <Parameter Name="Tema3_S" Parameter="tema3_S" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.Insertar_En_La_Tabla_De_Busqueda" Method="Insertar_En_La_Tabla_De_Busqueda">
@@ -490,6 +466,51 @@
     <Parameter Name="Colegio" Parameter="colegio" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Ano" Parameter="ano" Type="System.String" DbType="NVarChar(60)" />
     <Parameter Name="Profesor" Parameter="profesor" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Temas" Method="Temas">
+    <Parameter Name="Tema1" Parameter="tema1" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema2" Parameter="tema2" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema3" Parameter="tema3" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Homonimos_Ano" Method="Homonimos_Ano">
+    <Parameter Name="Tema1_S" Parameter="tema1_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema2_S" Parameter="tema2_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema3_S" Parameter="tema3_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Homonimos_Colegio" Method="Homonimos_Colegio">
+    <Parameter Name="Tema1_S" Parameter="tema1_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema2_S" Parameter="tema2_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema3_S" Parameter="tema3_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Homonimos_Temas" Method="Homonimos_Temas">
+    <Parameter Name="Tema1_S" Parameter="tema1_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema2_S" Parameter="tema2_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema3_S" Parameter="tema3_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sinonimos_Anos" Method="Sinonimos_Anos">
+    <Parameter Name="Ano1" Parameter="ano1" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Ano2" Parameter="ano2" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Ano3" Parameter="ano3" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sinonimos_Colegios" Method="Sinonimos_Colegios">
+    <Parameter Name="Colegio1" Parameter="colegio1" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Colegio2" Parameter="colegio2" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Colegio3" Parameter="colegio3" Type="System.String" DbType="NVarChar(60)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sinonimos_Temas" Method="Sinonimos_Temas">
+    <Parameter Name="Tema1_S" Parameter="tema1_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema2_S" Parameter="tema2_S" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="Tema3_S" Parameter="tema3_S" Type="System.String" DbType="NVarChar(60)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

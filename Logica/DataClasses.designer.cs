@@ -235,38 +235,10 @@ namespace Logica
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Temas")]
-		public int Temas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1", DbType="NVarChar(60)")] string tema1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2", DbType="NVarChar(60)")] string tema2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3", DbType="NVarChar(60)")] string tema3)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1, tema2, tema3);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Profesores")]
 		public int Profesores([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor1", DbType="NVarChar(60)")] string profesor1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor2", DbType="NVarChar(60)")] string profesor2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor3", DbType="NVarChar(60)")] string profesor3)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), profesor1, profesor2, profesor3);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Anos")]
-		public int Sinonimos_Anos([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano1_S", DbType="NVarChar(60)")] string ano1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano2_S", DbType="NVarChar(60)")] string ano2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano3_S", DbType="NVarChar(60)")] string ano3_S)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ano1_S, ano2_S, ano3_S);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Colegios")]
-		public int Sinonimos_Colegios([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio1_S", DbType="NVarChar(60)")] string colegio1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio2_S", DbType="NVarChar(60)")] string colegio2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio3_S", DbType="NVarChar(60)")] string colegio3_S)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), colegio1_S, colegio2_S, colegio3_S);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Temas")]
-		public int Sinonimos_Temas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1_S", DbType="NVarChar(60)")] string tema1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2_S", DbType="NVarChar(60)")] string tema2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3_S", DbType="NVarChar(60)")] string tema3_S)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1_S, tema2_S, tema3_S);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -648,6 +620,58 @@ namespace Logica
 		public int Actualizar_Tabla_Busqueda([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Identificador", DbType="Int")] System.Nullable<int> identificador, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema", DbType="NVarChar(60)")] string tema, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Materia", DbType="NVarChar(60)")] string materia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio", DbType="NVarChar(60)")] string colegio, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano", DbType="NVarChar(60)")] string ano, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profesor", DbType="NVarChar(60)")] string profesor)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), identificador, tema, materia, colegio, ano, profesor);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Temas")]
+		public int Temas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1", DbType="NVarChar(60)")] string tema1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2", DbType="NVarChar(60)")] string tema2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3", DbType="NVarChar(60)")] string tema3)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1, tema2, tema3);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Homonimos_Ano")]
+		public int Homonimos_Ano([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1_S", DbType="NVarChar(60)")] string tema1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2_S", DbType="NVarChar(60)")] string tema2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3_S", DbType="NVarChar(60)")] string tema3_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Resultado", DbType="Int")] ref System.Nullable<int> resultado)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1_S, tema2_S, tema3_S, resultado);
+			resultado = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Homonimos_Colegio")]
+		public int Homonimos_Colegio([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1_S", DbType="NVarChar(60)")] string tema1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2_S", DbType="NVarChar(60)")] string tema2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3_S", DbType="NVarChar(60)")] string tema3_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Resultado", DbType="Int")] ref System.Nullable<int> resultado)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1_S, tema2_S, tema3_S, resultado);
+			resultado = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Homonimos_Temas")]
+		public int Homonimos_Temas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1_S", DbType="NVarChar(60)")] string tema1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2_S", DbType="NVarChar(60)")] string tema2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3_S", DbType="NVarChar(60)")] string tema3_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Resultado", DbType="Int")] ref System.Nullable<int> resultado)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1_S, tema2_S, tema3_S, resultado);
+			resultado = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Anos")]
+		public int Sinonimos_Anos([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano1", DbType="NVarChar(60)")] string ano1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano2", DbType="NVarChar(60)")] string ano2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Ano3", DbType="NVarChar(60)")] string ano3)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ano1, ano2, ano3);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Colegios")]
+		public int Sinonimos_Colegios([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio1", DbType="NVarChar(60)")] string colegio1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio2", DbType="NVarChar(60)")] string colegio2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Colegio3", DbType="NVarChar(60)")] string colegio3)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), colegio1, colegio2, colegio3);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Sinonimos_Temas")]
+		public int Sinonimos_Temas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema1_S", DbType="NVarChar(60)")] string tema1_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema2_S", DbType="NVarChar(60)")] string tema2_S, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tema3_S", DbType="NVarChar(60)")] string tema3_S)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tema1_S, tema2_S, tema3_S);
 			return ((int)(result.ReturnValue));
 		}
 	}

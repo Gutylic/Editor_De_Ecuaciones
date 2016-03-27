@@ -12,6 +12,7 @@ namespace Logica
         DataClassesDataContext db = new DataClassesDataContext();
         string Etiqueta_Armada;
         string Respuesta;
+        int? Resultado;
 
         public int Actualizar_En_Tabla_Primera_Parte(int ID, string Enunciado_MATH, string Titulo, string Ubicacion_Video_Y_Explicaciones, int Tipo_De_Institucion, int Tipo_De_Ejercicio, string Explicacion_Realizada, string Ubicacion_Respuesta_Imprimible, string Ubicacion_Respuesta_Visible)
         {
@@ -32,6 +33,24 @@ namespace Logica
 
             return Enunciado_MATH.Remove(Enunciado_MATH.Length - 7, 7).ToLower();
            
+        }
+
+        public int? Logica_Verificacion_Homonimos_Tema(string Tema1_S, string Tema2_S, string Tema3_S)
+        {
+            db.Homonimos_Temas(Tema1_S, Tema2_S, Tema3_S, ref Resultado);
+            return Resultado;
+        }
+
+        public int? Logica_Verificacion_Homonimos_Ano(string Ano1, string Ano2, string Ano3)
+        {
+            db.Homonimos_Ano(Ano1, Ano2, Ano3, ref Resultado);
+            return Resultado;
+        }
+
+        public int? Logica_Verificacion_Homonimos_Colegio(string Colegio1, string Colegio2, string Colegio3)
+        {
+            db.Homonimos_Colegio(Colegio1, Colegio2, Colegio3, ref Resultado);
+            return Resultado;
         }
 
         public string Enunciado_Limpio(string Enunciado_MATH)
@@ -169,11 +188,12 @@ namespace Logica
         public void Actualizar_En_Tabla_Segunda_Parte(string Tema1_S, string Tema2_S, string Tema3_S, string Tema1, string Tema2, string Tema3, string Materia1, string Materia2, string Materia3, string Colegio1, string Colegio2, string Colegio3, string Ano1, string Ano2, string Ano3, string Profesor1, string Profesor2, string Profesor3)
         {
             db.Sinonimos_Temas(Corregir_Etiqueta(Tema1), Corregir_Etiqueta(Tema2), Corregir_Etiqueta(Tema3));
-            db.Temas(Corregir_Etiqueta(Tema1_S), Corregir_Etiqueta(Tema2_S), Corregir_Etiqueta(Tema3_S));
+            db.Temas(Corregir_Etiqueta(Tema1_S), Corregir_Etiqueta(Tema2_S), Corregir_Etiqueta(Tema3_S));            
             db.Materias(Corregir_Etiqueta(Materia1), Corregir_Etiqueta(Materia2), Corregir_Etiqueta(Materia3));
-            db.Sinonimos_Colegios(Corregir_Etiqueta(Colegio1), Corregir_Etiqueta(Colegio2), Corregir_Etiqueta(Colegio3));
-            db.Sinonimos_Anos(Corregir_Etiqueta(Ano1), Corregir_Etiqueta(Ano2), Corregir_Etiqueta(Ano3));
             db.Profesores(Corregir_Etiqueta(Profesor1), Corregir_Etiqueta(Profesor2), Corregir_Etiqueta(Profesor3));
+            db.Sinonimos_Anos(Corregir_Etiqueta(Ano1), Corregir_Etiqueta(Ano2), Corregir_Etiqueta(Ano3));
+            
+            db.Sinonimos_Colegios(Corregir_Etiqueta(Colegio1), Corregir_Etiqueta(Colegio2), Corregir_Etiqueta(Colegio3));
 
         }
 

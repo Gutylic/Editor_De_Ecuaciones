@@ -142,22 +142,7 @@ namespace index
             Actualizar_Ejercicio.Enabled = false;
             string Identificadora = (((string)Session["fileName"]).Substring(9));
             int Identificador = int.Parse(Identificadora.Substring(0, Identificadora.Length-4));
-            int Valor = LLDA.Actualizar_En_Tabla_Primera_Parte(Identificador,(string)Session["Contenido_Wiris"],(string)Session["Titulo"],(string)Session["Ubicacion_Del_Video_Y_Explicacion"],(int)Session["DropDownList_Institucion"], (int)Session["DropDownList_Tipo"], (string)Session["DropDownList_Enunciado_Realizado"],(string)Session["Ubicacion_De_Impresion"],(string)Session["Ubicacion_Del_Ejercicio"]);
-
-            switch (Valor)
-            {
-                case 1:
-
-                    break;
-
-                case -6:
-
-                    string Fallo = @"<script type='text/javascript'>   
-                                   alert('Ha ocurrido un error y no pudo conectarse a la base de datos intente más tarde');
-                                   </script>";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
-                    break;
-            }
+            
 
             string Tema1_S = LLDA.Correcion_De_Datos_Vacios(TextBox_Tema1_S.Text, TextBox_Tema2_S.Text, TextBox_Tema3_S.Text).Valor_1;
             string Tema2_S = LLDA.Correcion_De_Datos_Vacios(TextBox_Tema1_S.Text, TextBox_Tema2_S.Text, TextBox_Tema3_S.Text).Valor_2;
@@ -182,6 +167,49 @@ namespace index
             string Profesor1 = LLDA.Correcion_De_Datos_Vacios(TextBox_Profesor1.Text, TextBox_Profesor2.Text, TextBox_Profesor3.Text).Valor_1;
             string Profesor2 = LLDA.Correcion_De_Datos_Vacios(TextBox_Profesor1.Text, TextBox_Profesor2.Text, TextBox_Profesor3.Text).Valor_2;
             string Profesor3 = LLDA.Correcion_De_Datos_Vacios(TextBox_Profesor1.Text, TextBox_Profesor2.Text, TextBox_Profesor3.Text).Valor_3;
+
+            if (LLDA.Logica_Verificacion_Homonimos_Tema(Tema1, Tema2, Tema3) == -1)
+            {
+                string Fallo = @"<script type='text/javascript'>   
+                                   alert('Error de concordancia de etiquetas Tema');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
+                return;
+            }
+
+            if (LLDA.Logica_Verificacion_Homonimos_Colegio(Colegio1, Colegio2, Colegio3) == -1)
+            {
+                string Fallo = @"<script type='text/javascript'>   
+                                   alert('Error de concordancia de etiquetas Colegio');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
+                return;
+            }
+
+            if (LLDA.Logica_Verificacion_Homonimos_Ano(Ano1, Ano2, Ano3) == -1)
+            {
+                string Fallo = @"<script type='text/javascript'>   
+                                   alert('Error de concordancia de etiquetas Años');
+                                   </script>";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
+                return;
+            }
+            int Valor = LLDA.Actualizar_En_Tabla_Primera_Parte(Identificador, (string)Session["Contenido_Wiris"], (string)Session["Titulo"], (string)Session["Ubicacion_Del_Video_Y_Explicacion"], (int)Session["DropDownList_Institucion"], (int)Session["DropDownList_Tipo"], (string)Session["DropDownList_Enunciado_Realizado"], (string)Session["Ubicacion_De_Impresion"], (string)Session["Ubicacion_Del_Ejercicio"]);
+
+            switch (Valor)
+            {
+                case 1:
+
+                    break;
+
+                case -6:
+
+                    string Fallo = @"<script type='text/javascript'>   
+                                   alert('Ha ocurrido un error y no pudo conectarse a la base de datos intente más tarde');
+                                   </script>";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "", Fallo, false);
+                    break;
+            }
 
             LLDA.Actualizar_En_Tabla_Segunda_Parte(Tema1_S, Tema2_S, Tema3_S, Tema1, Tema2, Tema3, Materia1, Materia2, Materia3, Colegio1, Colegio2, Colegio3, Ano1, Ano2, Ano3, Profesor1, Profesor2, Profesor3);
 
