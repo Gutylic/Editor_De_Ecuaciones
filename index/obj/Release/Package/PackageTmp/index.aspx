@@ -6,8 +6,6 @@
 <head runat="server">
 
 
-   
-
     <title>Editor De Ecuaciones</title>
 
     <!-- Bootstrap Core CSS -->
