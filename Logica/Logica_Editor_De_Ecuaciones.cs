@@ -21,12 +21,12 @@ namespace Logica
         {
             
 
-            if (Ubicacion_Video_Y_Explicaciones == string.Empty) 
-            {
-                Ubicacion_Video_Y_Explicaciones = null;
+            //if (Ubicacion_Video_Y_Explicaciones == string.Empty) 
+            //{
+            //    Ubicacion_Video_Y_Explicaciones = null;
                 
-                return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio,Ubicacion1 ,Ubicacion2, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
-            }
+            //    return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio,Ubicacion1 ,Ubicacion2, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
+            //}
             return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_Y_Final_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion1, Ubicacion2, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
         }
 

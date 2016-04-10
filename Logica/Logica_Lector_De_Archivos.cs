@@ -17,12 +17,17 @@ namespace Logica
         public int Actualizar_En_Tabla_Primera_Parte(int ID, string Enunciado_MATH, string Titulo, string Ubicacion_Video_Y_Explicaciones, int Tipo_De_Institucion, int Tipo_De_Ejercicio, string Explicacion_Realizada, string Ubicacion_Respuesta_Imprimible, string Ubicacion_Respuesta_Visible)
         {
 
-            if (Ubicacion_Video_Y_Explicaciones == string.Empty)
-            {
-                Ubicacion_Video_Y_Explicaciones = null;
+            //if (Ubicacion_Video_Y_Explicaciones == string.Empty)
+            //{
+            //    Ubicacion_Video_Y_Explicaciones = null;
                 return db.Actualizar_Datos_En_La_Base(ID, Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
-            }
-            return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
+            //}
+            //else
+            //{ 
+            
+            
+            //}
+            //return db.Insertar_Datos_En_La_Base(Quitar_Encabezado_MATH(Enunciado_MATH), Enunciado_Limpio(Enunciado_MATH), Titulo, Tipo_De_Institucion, Tipo_De_Ejercicio, Ubicacion_Respuesta_Imprimible, Ubicacion_Respuesta_Visible, Ubicacion_Video_Y_Explicaciones, Convert.ToBoolean(Explicacion_Realizada));
         }
 
         public string Quitar_Encabezado_MATH(string Enunciado_MATH)

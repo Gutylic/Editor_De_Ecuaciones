@@ -51,7 +51,7 @@ namespace index
                 DropDownList_Enunciado_Realizado.SelectedValue = "false";
             }
 
-            if (DropDownList_Tipo.SelectedValue == "1")
+            if (DropDownList_Tipo.SelectedValue == "1" && DropDownList_Enunciado_Realizado.SelectedValue == "false")
             {
                 Ubicacion_Del_Video_Y_Explicacion.Text = null;
             }
